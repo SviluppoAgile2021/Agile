@@ -28,7 +28,7 @@ jobs:
       
       - name: Start up server MySQL
         run: |
-          sudo /etc/init.d/mysql start
+          sudo systemctl start mysql
      #   mysql -u root -proot -e "CREATE DATABASE IF NOT EXISTS db" 
         # non necessario se è presente nel dump. Farebbe comodo avere anche la creazione dell'utente nel dump, ma nel caso *dovrebbe* essere giusto un comando da mettere qui
       - name: Import dump
