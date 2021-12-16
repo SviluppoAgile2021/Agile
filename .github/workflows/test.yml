@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ s-Login ]
   pull_request:
-    branches: [ main ]
+    branches: [ s-Login]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -55,7 +55,7 @@ jobs:
             php_version: latest # optional, default is latest
             php_extensions: mysqli
             bootstrap: vendor/autoload.php
-            configuration: /Php/test/phpunit.xml
+            configuration: Php/test/phpunit.xml
 
       # Runs a single command using the runners shell
       #- name: Testing
