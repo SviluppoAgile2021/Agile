@@ -6,4 +6,6 @@ while ($rigaCorrente = $ris->fetch_array()) {
     $id = $rigaCorrente['id'];
     echo "<option value=\"$id\"> $generi </option>";
 }
+
+//commento di prova per testing CI automatico
 mysqli_close($conn);
