@@ -53,7 +53,7 @@ jobs:
             php_version: latest # optional, default is latest
             php_extensions: mysqli
             bootstrap: vendor/autoload.php
-            configuration: /Php/test/phpunit.xml
+            configuration: Php/test/phpunit.xml
 
       # Runs a single command using the runners shell
       #- name: Testing
