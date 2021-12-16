@@ -3,7 +3,7 @@
 	
 	class Signup {
 		
-		public function signup ($nome, $cognome, $nome_utente, $password_utente, $data_nascita, $citta, $debug){
+		public function signup ($nome, $cognome, $nome_utente, $password_utente, $data_nascita, $citta, $debug) : bool {
 			//controllo della variabile di debug per connettersi al db per testing
 			if($debug === TRUE){
 				include("DebugConnectionDB.php");
