@@ -2,16 +2,15 @@
 session_start();
 
 class Login
-{
-    public function loginUtente($usernameInp, $passwordInp, $debug) : bool
     {
-        if($debug === TRUE){
-            include("DebugConnectionDB.php");
-        } elseif ($debug === FALSE){
-            include("ConnectionDB.php");
-        }
+        public function loginUtente($usernameInp, $passwordInp, $debug): bool
+        {
+            if ($debug === TRUE) {
+                include("DebugConnectionDB.php");
+            } elseif ($debug === FALSE) {
+                include("ConnectionDB.php");
+            }
 
-        if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $query = "SELECT * FROM Utenti WHERE username = '$usernameInp' AND pwd = '$passwordInp'";
 
             if (isset($conn)) {
@@ -30,10 +29,8 @@ class Login
             } else {
                 echo "login errato";
                 return false;
+
             }
         }
-        return false;
     }
-}
-
 ?>
