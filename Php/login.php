@@ -29,7 +29,6 @@ class Login
             } else {
                 echo "login errato";
                 return false;
-
             }
         }
     }
