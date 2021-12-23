@@ -258,7 +258,8 @@ INSERT INTO `Utenti` (`id`, `nome`, `cognome`, `data_nascita`, `citta`, `usernam
 (11, 'Matteo', 'Bruno', '1990-10-13', 'Roma', 'utente11', 'utente11'),
 (12, 'Nicolas', 'Paruolo', '1996-04-12', 'Bologna', 'utente12', 'utente12'),
 (14, 'sporteal_agile2021', 'Agile2021', '2021-06-09', 'Ancona', 'sporteal_agile2021', 'Agile2021'),
-(15, 'coso', 'non coso', '2021-06-09', 'Ancona', 'sporteal_agile2021', 'Agile2021');
+(15, 'coso', 'non coso', '2021-06-09', 'Ancona', 'sporteal_agile2021', 'Agile2021'),
+(16, 'Muori', 'Ora', '1969-12-21', 'Male', 'uccidimi', 'digiustezza');
 
 --
 -- Indici per le tabelle scaricate
