@@ -23,7 +23,6 @@ class EliminaUtente
         //echo "\n".$dbgQuery;
         //mysqli_select_db($conn, $dbname);
 
-        $risultato = mysqli_query($conn, $query);
         $risultato2 = mysqli_query($conn, $query2);
 
         //$riga = mysqli_fetch_assoc($risultato);
@@ -33,6 +32,7 @@ class EliminaUtente
             mysqli_close($conn);
             return false;
         } else {
+            $risultato = mysqli_query($conn, $query);
             echo "\nT";
             echo("\nUtente eliminato con successo.");
             mysqli_close($conn);
