@@ -13,7 +13,7 @@ class EliminaUtenteTest extends TestCase
         $this->assertTrue($result);
 
         //verifica sull'utente NON esistente
-        $result = $utente->eliminaUtente(200, true);
+        $result = $utente->eliminaUtente(101, true);
         $this->assertFalse($result);
 
         //verifica sull'id "null"
