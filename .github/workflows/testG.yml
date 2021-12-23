@@ -5,10 +5,11 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
 
-    branches: [ main , c-CreaEvento, n-signup, s-Login, e-RimozioneUtente]
-  pull_request:
-    branches: [ main , c-CreaEvento, n-signup, s-Login, e-RimozioneUtente]
 
+    branches: [ main , c-CreaEvento, n-signup, s-Login, e-RimozioneUtente,  g-iscrizEventi, e-VisualizzaTuttiEventi]
+  pull_request:
+    branches: [ main , c-CreaEvento, n-signup, s-Login, e-RimozioneUtente,  g-iscrizEventi, e-VisualizzaTuttiEventi]
+    
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
