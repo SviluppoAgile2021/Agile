@@ -9,7 +9,7 @@ class EliminaUtenteTest extends TestCase
     {
         $utente = new EliminaUtente();
         //verifica se l'utente esistente viene rimosso correttamente
-        $result = $utente->eliminaUtente(24, true);
+        $result = $utente->eliminaUtente(10, true);
         $this->assertTrue($result);
 
         //verifica sull'utente NON esistente
