@@ -17,7 +17,7 @@ class EliminaUtente
 
         $query = "DELETE FROM Utenti WHERE 'id' = '$id'";
 
-        $query2 = "SELECT FROM Utenti WHERE 'id' = '$id'";
+        $query2 = "SELECT * FROM Utenti WHERE 'id' = '$id'";
 
         //$dbgQuery = $query;
         //echo "\n".$dbgQuery;
