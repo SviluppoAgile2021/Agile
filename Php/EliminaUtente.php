@@ -23,7 +23,7 @@ class EliminaUtente
 
         $risultato = mysqli_query($conn, $query);
         //$riga = mysqli_fetch_assoc($risultato);
-        if (mysqli_affected_rows($risultato) == 0) {
+        if (mysqli_affected_rows($conn) == 0) {
             echo "Error";
             echo(mysqli_error($conn));
             mysqli_close($conn);
