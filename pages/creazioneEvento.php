@@ -5,13 +5,15 @@
     <title>Crea un evento</title>
 </head>
 <body>
-    <form action="../Php/creaEvento.php" method="post">
+    <form action="../Php/creaEventoController.php" method="post">
           <label for="fname">Nome dell'evento :</label><br>
           <input type="text" id="fname" name="nomeEvento" required><br>
-
-          <label for="lname">Luogo :</label><br>
-          <input type="text" id="lname" name="luogo" required ><br>
-
+            <br>
+            <label for="luogo">Luogo dell'evento :</label><br>
+            <select name="luogo" id="luogo" required>
+                <?php include("../Php/stampaLuoghi.php"); ?>
+            </select>
+            <br>
             <label for="lname">Data :</label><br>
             <input type="date" id="lname" name="data" required><br>
 
@@ -31,11 +33,6 @@
             <select name="offerta" id="offerta" required>
                 <option value="si">Si</option>
                 <option value="no">No</option>
-            </select>
-            <br>
-            <label for="luogo">Luogo dell'evento :</label><br>
-            <select name="luogo" id="luogo" required>
-                <?php include("../Php/stampaLuoghi.php"); ?>
             </select>
             <br>
             <label for="genere">Genere dell'evento :</label><br>
