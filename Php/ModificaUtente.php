@@ -17,7 +17,7 @@ class ModificaUtente
         }
 
         //creazione query dati escape
-        $query = "UPDATE Utenti (nome, cognome, data_nascita, citta, username, pwd) SET ('$nome','$cognome','$data_nascita', '$citta', '$username', '$pwd') WHERE id='$id'";
+        $query = "UPDATE Utenti (nome, cognome, data_nascita, citta, username, pwd) SET ('$nome','$cognome','$data_nascita','$citta','$username','$pwd') WHERE id='$id'";
 
         $res = mysqli_query($conn, $query);
         if ($res === false) {
