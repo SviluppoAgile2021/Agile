@@ -6,9 +6,9 @@ on:
   push:
 
 
-    branches: [ main , c-CreaEvento, n-signup, s-Login, e-RimozioneUtente,  g-iscrizEventi, e-VisualizzaTuttiEventi]
+    branches: [ main , c-CreaEvento, n-signup, s-Login, e-RimozioneUtente,  g-iscrizEventi, e-VisualizzaTuttiEventi, g-policyFormale]
   pull_request:
-    branches: [ main , c-CreaEvento, n-signup, s-Login, e-RimozioneUtente,  g-iscrizEventi, e-VisualizzaTuttiEventi]
+    branches: [ main , c-CreaEvento, n-signup, s-Login, e-RimozioneUtente,  g-iscrizEventi, e-VisualizzaTuttiEventi, g-policyFormale]
     
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
