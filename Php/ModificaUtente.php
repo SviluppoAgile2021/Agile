@@ -5,10 +5,15 @@ class ModificaUtente
 
     public function modificaUtente($id, $nome, $cognome, $data_nascita, $citta, $username, $pwd, $debug): bool
     {
-        if ($debug === TRUE) {
+        if ($debug === true) {
             include("DebugConnectionDB.php");
-        } elseif ($debug === FALSE) {
+        } elseif ($debug === false) {
             include("ConnectionDB.php");
+        }
+
+        if ($id == null) {
+            echo "Errore: ID Utente non valido!";
+            return false;
         }
 
         //creazione query dati escape
@@ -16,8 +21,8 @@ class ModificaUtente
         $debugQuery = $query;
         echo "\n" . $debugQuery;
 
-        $risultato = mysqli_query($conn, $query);
-        if ($risultato === FALSE) {
+        $res = mysqli_query($conn, $query);
+        if ($res === false) {
             echo "F";
             echo(mysqli_error($conn));
             mysqli_close($conn);
