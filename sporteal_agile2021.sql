@@ -45,13 +45,13 @@ CREATE TABLE `Eventi` (
 
 INSERT INTO `Eventi` (`id`, `id_luogo`, `id_gruppo`, `nome`, `data_evento`, `capienza`, `id_genere`, `prezzo`, `offerta`, `formale`) VALUES
 
-(2, 2, 2, 'Carl Brave - Coraggio Tour 2021', '2021-06-14 21:00:00', NULL, 11, NULL, NULL, NULL),
-(3, 3, 3, 'Pinguini Tattici Nucleari - Ma chi l\'avrebbe mai detto Tour ', '2021-10-21 20:30:00', 5800, 2, NULL, NULL, NULL),
-(4, 4, 3, 'Pinguini Tattici Nucleari - Ma chi l\'avrebbe mai detto Tour ', '2021-10-28 20:30:00', 11000, 2, NULL, NULL, NULL),
-(5, 5, 3, 'rovere - Live 2022', '2022-03-13 22:00:00', 18000, 2, NULL, NULL, NULL),
-(6, 6, 3, 'rovere - Live 2022', '2022-03-28 22:00:00', NULL, 2, NULL, NULL, NULL),
-(7, 7, 1, 'Ligabue - Start Tour 2022', '2022-08-10 20:00:00', 84000, 1, NULL, NULL, NULL),
-(8, 8, 1, 'Ligabue - Start Tour 2022', '2022-08-28 20:00:00', 36000, 1, NULL, NULL, NULL),
+(2, 2, 2, 'Carl Brave - Coraggio Tour 2021', '2021-06-14 21:00:00', NULL, 11, NULL, NULL, 0),
+(3, 3, 3, 'Pinguini Tattici Nucleari - Ma chi l\'avrebbe mai detto Tour ', '2021-10-21 20:30:00', 5800, 2, NULL, NULL, 0),
+(4, 4, 3, 'Pinguini Tattici Nucleari - Ma chi l\'avrebbe mai detto Tour ', '2021-10-28 20:30:00', 11000, 2, NULL, NULL, 0),
+(5, 5, 3, 'rovere - Live 2022', '2022-03-13 22:00:00', 18000, 2, NULL, NULL, 0),
+(6, 6, 3, 'rovere - Live 2022', '2022-03-28 22:00:00', NULL, 2, NULL, NULL, 1),
+(7, 7, 1, 'Ligabue - Start Tour 2022', '2022-08-10 20:00:00', 84000, 1, NULL, NULL, 0),
+(8, 8, 1, 'Ligabue - Start Tour 2022', '2022-08-28 20:00:00', 36000, 1, NULL, NULL, 1),
 (9, 1, 1, 'a', NULL, 250, 1, 250.00, 0, 0),
 (10, 1, 1, 'a', NULL, 250, 1, 250.00, 0, 1),
 (11, 1, 1, 'asdrubale', '2021-08-08 20:30:00', 25, 1, 250.00, 0, 0),
@@ -79,7 +79,7 @@ INSERT INTO `Eventi` (`id`, `id_luogo`, `id_gruppo`, `nome`, `data_evento`, `cap
 (33, 1, 1, 'asdrubale', '2021-08-08 20:30:00', 25, 1, 250.00, 0, 0),
 (34, 1, 1, 'asdrubale', '2021-08-08 20:30:00', 25, 1, 250.00, 0, 0),
 (35, 1, 1, 'asdrubale', '2021-08-08 20:30:00', 25, 1, 250.00, 0, 0),
-(36, 1, 1, 'Ligabue - Start Tour 2022', '2022-07-28 20:00:00', 24000, 1, NULL, NULL, NULL);
+(36, 1, 1, 'Ligabue - Start Tour 2022', '2022-07-28 20:00:00', 24000, 1, NULL, NULL, 1);
 -- --------------------------------------------------------
 
 --
