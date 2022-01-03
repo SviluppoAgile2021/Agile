@@ -33,7 +33,7 @@ class CreaEventoTest extends TestCase
 	    );
 		
 		//verifica con evento normale
-		$result = $OggettoEvento->creazioneEvento("test normale", "1", "1", "250", "1", "1", "150.00", "0", "2022-08-08 20:30", TRUE);
+		$result = $OggettoEvento->creazioneEvento("test normale", "2", "1", "250", "1", "1", "150.00", "0", "2022-08-08 20:30", TRUE);
 	    $this->assertThat(
 		    $result[0],
 		    $this->isFalse($result[0])
