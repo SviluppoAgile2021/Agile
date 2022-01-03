@@ -13,7 +13,7 @@ class CreaEvento
             include("ConnectionDB.php");
         }
 		
-		$clausole = ["false", "false"]; // [val_capienza, val_resto]
+		$clausole = [false, false]; // [val_capienza, val_resto]
 	
 	    $queryCap = "SELECT capienza_max FROM Luoghi WHERE id = '$id_luogo'";
 	    $risultato = mysqli_query($conn, $queryCap);
