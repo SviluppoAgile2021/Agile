@@ -4,7 +4,7 @@
 class CreaEvento
 {
     //da ricavare-inserire : idLuogo,idGruppo,idGenere
-    public function creazioneEvento($nome, $id_luogo, $id_gruppo, $capienza, $id_genere, $formale, $prezzo, $offerta, $data_evento, $debug): bool
+    public function creazioneEvento($nome, $id_luogo, $id_gruppo, $capienza, $id_genere, $formale, $prezzo, $offerta, $data_evento, $debug) : array
     {
 
         if ($debug === TRUE) {
@@ -12,35 +12,33 @@ class CreaEvento
         } elseif ($debug === FALSE) {
             include("ConnectionDB.php");
         }
-        //dunque se la capienza inserita è pari a zero, si prende tutta la capienza disponibile
-        if ($capienza == 0) {
-            $risultato = mysqli_query($conn, "SELECT capienza_max FROM Luoghi WHERE id='$id_luogo'");
-            $row = mysqli_fetch_array($risultato);
-            $capienza = $row[0];
-        }
+		
+		$clausole = ["false", "false"]; // [val_capienza, val_resto]
+	
+	    $queryCap = "SELECT capienza_max FROM Luoghi WHERE id = '$id_luogo'";
+	    $risultato = mysqli_query($conn, $queryCap);
+	    $riga = mysqli_fetch_array($risultato);
+		
+		if ($capienza == 0){
+			$capienza = $riga[0];       //inserisco il valore di default della capienza massima (cioè la capienza massima del luogo)
+			$clausole[0] = TRUE;        //metto un flag per indicare che ho cambiato la variabile di capienza_max
+		} elseif($capienza > $riga[0]){
+			echo "La capienza inserita supera la capienza massima del luogo";
+			return $clausole;               //non faccio eseguire la query di aggiunta dell'evento
+		}
 
-        if ($capienza > 0) {
-            $risultato = mysqli_query($conn, "SELECT capienza_max FROM Luoghi WHERE id='$id_luogo'");
-            $row = mysqli_fetch_array($risultato);
-            if($capienza>$risultato){
-                echo"La capienza inserita eccede quella massima";
-            }
-        }
 
-
-        //creazione query con i dati con escape
         $query = "INSERT INTO Eventi(nome, id_luogo, id_gruppo, capienza, id_genere, prezzo, formale, offerta, data_evento) VALUES ('$nome','$id_luogo','$id_gruppo', '$capienza', '$id_genere', '$prezzo','$formale', '$offerta', '$data_evento')";
         $risultato = mysqli_query($conn, $query);
-        //$riga = mysqli_fetch_assoc($risultato);
         if ($risultato === FALSE) {
-            //echo "\nEvento non creato";
             echo(mysqli_error($conn));
             mysqli_close($conn);
-            return false;
+			$clausole[1] = FALSE;
+            return $clausole;
         } else {
-            //echo("\nEvento creato con successo");
             mysqli_close($conn);
-            return true;
+			$clausole[1] = TRUE;
+            return $clausole;
         }
     }
 
