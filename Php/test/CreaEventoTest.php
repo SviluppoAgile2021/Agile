@@ -25,7 +25,7 @@ class CreaEventoTest extends TestCase
 		$result = $OggettoEvento->creazioneEvento("test overbooking", "1", "1", "99999", "1", "1", "150.00", "0", "2022-08-08 20:30", TRUE);
 	    $this->assertThat(
 		    $result[0],
-		    $this->isTrue($result[0])
+		    $this->isFalse($result[0])
 	    );
 	    $this->assertThat(
 		    $result[1],
