@@ -20,11 +20,11 @@ class Login
             if ($num == 1) {
 
                 session_start();
-
                 $_SESSION['username'] = $usernameInp;
                 $_SESSION['password'] = $passwordInp;
-                $conn->close();
+                //$conn->close();
                 header('location: ../pages/welcome.html');  //qui bisogna mettere il path della home
+                exit();
                 return true;
             } else {
                 echo "login errato";
