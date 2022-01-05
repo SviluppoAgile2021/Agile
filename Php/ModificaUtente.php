@@ -21,7 +21,7 @@ class ModificaUtente
 
         if (isset($conn)) {
             $res = mysqli_query($conn, $query);
-            $num = mysqli_num_rows($res);
+            $num = mysqli_affected_rows($res);
         }
         if ($num == 1) {
             echo "\nT";
