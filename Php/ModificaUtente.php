@@ -24,18 +24,13 @@ class ModificaUtente
             $num = mysqli_num_rows($res);
         }
         if ($num == 1) {
-            $res = mysqli_query($conn, $query);
-        }
-        if ($res === false) {
-            echo "F";
-            echo(mysqli_error($conn));
-            mysqli_close($conn);
-            return false;
-        } else {
             echo "\nT";
             echo("\nDati Utente aggiornati con successo.");
             mysqli_close($conn);
             return true;
+        }
+        else {
+            return false;
         }
     }
 }
