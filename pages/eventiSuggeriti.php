@@ -24,7 +24,7 @@
       </tr>
       </thead>
       <tbody>
-      <?php include("../Php/eventiSuggeriti.php"); ?>
+      <?php include("../Php/eventiSuggeritiController.php"); ?>
 
       </tbody>
     </table>
