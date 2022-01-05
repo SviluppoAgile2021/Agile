@@ -19,7 +19,13 @@ class ModificaUtente
         //creazione query dati escape
         $query = "UPDATE Utenti SET nome='$nome', cognome='$cognome', data_nascita='$data_nascita', citta='$citta', username='$username', pwd='$pwd' WHERE id='$id'";
 
-        $res = mysqli_query($conn, $query);
+        if (isset($conn)) {
+            $res = mysqli_query($conn, $query);
+            $num = mysqli_num_rows($res);
+        }
+        if ($num == 1) {
+            $res = mysqli_query($conn, $query);
+        }
         if ($res === false) {
             echo "F";
             echo(mysqli_error($conn));
