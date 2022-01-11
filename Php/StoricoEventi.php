@@ -13,27 +13,28 @@
 			echo "<tr> <td colspan='4'> Non hai ancora partecipato a nessun evento </td> </tr>";
 		}
 		
-		while ($row = $result->fetch_array()) {
-			$id = $row['id'];
-			$evento = $row['Titolo'];
-			$data = $row['data_evento'];
-			$luogo = $row['Luogo'];
-			echo "<tr> \n";
-			echo "<td> $id </td>";
-			echo "<td> $evento </td>";
-			echo "<td> $data </td>";
-			echo "<td> $luogo </td>";
-			echo "</tr> \n";
+	}
+	while ($row = $result->fetch_array()) {
+		$id = $row['id'];
+		$evento = $row['Titolo'];
+		$data = $row['data_evento'];
+		$luogo = $row['Luogo'];
+		
+		echo "<div class='event-title mb-15'>
+			<h3 class='title'> ".$evento." </h3>
+		</div>";
+		
+		echo "<p class='discription-text mb-30'> ".$data." </p>"
+			
+		echo "<ul>
+			<li>
+				<div class='info-content'>
+					<small>". $luogo ".</small>
+				</div>
+			</li>
+		</ul>";
+			
+		
 		}
-	}
-	
-	if (isset($_SESSION)){
-		echo "<table>";
-		echo "<th> ID </th>";
-		echo "<th> Titolo </th>";
-		echo "<th> Data </th>";
-		echo "<th> Luogo </th>";
-		storicoEventi($_SESSION['id'], $conn);
-		echo "</table>";
-	}
+
 ?>
