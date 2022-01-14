@@ -41,7 +41,7 @@
             </select>
 
             <select class="country-select"  name="admin3" id="admin3" required>
-                <?php include("../Php/stampaUtenti.php"); ?>
+                <?php include("../Php/stampaUtentiG.php"); ?>
             </select>
 
             <br>

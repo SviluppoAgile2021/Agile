@@ -930,21 +930,21 @@
                                         <div class="form-item">
                                             <select class="country-select"  name="admin1" id="admin1" required>
                                                 <option value="-1" selected> (nessuno) </option>
-                                                <?php include("../Php/stampaUtenti.php"); ?>
+                                                <?php include("../Php/stampaUtentiG.php"); ?>
                                             </select>
                                         </div>
                                         <label><strong> 2 Admin supplementare (opzionale) :</strong></label>
                                         <div class="form-item">
                                             <select class="country-select"  name="admin2" id="admin2" required>
                                                 <option value="-1" selected> (nessuno) </option>
-                                                <?php include("../Php/stampaUtenti.php"); ?>
+                                                <?php include("../Php/stampaUtentiG.php"); ?>
                                             </select>
                                         </div>
                                         <label><strong> 3 Admin supplementare (opzionale) :</strong></label>
                                         <div class="form-item">
                                             <select class="country-select"  name="admin3" id="admin3" required>
                                                 <option value="-1" selected> (nessuno) </option>
-                                                <?php include("../Php/stampaUtenti.php"); ?>
+                                                <?php include("../Php/stampaUtentiG.php"); ?>
                                             </select>
                                         </div>
 
