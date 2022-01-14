@@ -4,7 +4,7 @@ include("Php/AddAdmin.php");
 class addAdminTest extends TestCase
 {
     public function testAddAdminUnit()
-    {
+    {   //testing
         $OggettoEvento = new AddAdmin();
 
         $result = $OggettoEvento->aggiungiAdmin(1, 2, 3,4,true);
