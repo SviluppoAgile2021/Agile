@@ -170,7 +170,7 @@ INSERT INTO `Gruppi` (`id`, `id_admin_gruppo`, `id_membro_1`, `id_membro_2`, `id
 -- Trigger `Gruppi`
 --
 DELIMITER $$
-CREATE DEFINER=`root`@`%` TRIGGER `formazione_gruppo` AFTER INSERT ON `Gruppi` FOR EACH ROW BEGIN 
+CREATE TRIGGER `formazione_gruppo` AFTER INSERT ON `Gruppi` FOR EACH ROW BEGIN 
 	INSERT INTO `formano` (id_utente, id_gruppo) VALUES (NEW.id_admin_gruppo, NEW.id);
     if NEW.id_membro_1 IS NOT NULL THEN
     INSERT INTO `formano` (id_utente, id_gruppo) VALUES (NEW.id_membro_1, NEW.id);
