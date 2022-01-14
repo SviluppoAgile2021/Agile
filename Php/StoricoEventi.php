@@ -1,6 +1,7 @@
 <?php
 	include("ConnectionDB.php");
-	function storicoEventi($id_utente, $condb) : void {
+	function storicoEventi($id_utente, $condb) : void
+	{
 		$query = "SELECT Eventi.id, Eventi.nome as Titolo, Eventi.data_evento, Luoghi.nome as Luogo
 						FROM partecipano
 						JOIN Eventi ON (id_evento=Eventi.id)
@@ -9,31 +10,33 @@
 		
 		$result = mysqli_query($condb, $query);
 		
-		if(mysqli_num_rows($result) == 0){
+		if (mysqli_num_rows($result) == 0) {
 			echo "<tr> <td colspan='4'> Non hai ancora partecipato a nessun evento </td> </tr>";
 		}
+		
 		
 		while ($row = $result->fetch_array()) {
 			$id = $row['id'];
 			$evento = $row['Titolo'];
 			$data = $row['data_evento'];
 			$luogo = $row['Luogo'];
-			echo "<tr> \n";
-			echo "<td> $id </td>";
-			echo "<td> $evento </td>";
-			echo "<td> $data </td>";
-			echo "<td> $luogo </td>";
-			echo "</tr> \n";
+			
+			echo "<div class='event-title mb-15'>
+			<h3 class='title'> " . $evento . " </h3>
+		</div>";
+			
+			echo "<p class='discription-text mb-30'> " . $data . " </p>"
+			
+		echo "<ul>
+			<li>
+				<div class='info-content'>
+					<small>" . $luogo ".</small>
+				</div>
+			</li>
+		</ul>";
+			
+		
 		}
 	}
-	
-	if (isset($_SESSION)){
-		echo "<table>";
-		echo "<th> ID </th>";
-		echo "<th> Titolo </th>";
-		echo "<th> Data </th>";
-		echo "<th> Luogo </th>";
-		storicoEventi($_SESSION['id'], $conn);
-		echo "</table>";
-	}
+
 ?>
