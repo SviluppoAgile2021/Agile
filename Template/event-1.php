@@ -97,7 +97,7 @@
 							<div class="register-login-group">
 								<ul>
 									<li>
-										<a href="#register-modal" class="register-modal-btn">
+										<a href="./signup.html" class="register-modal-btn">
 											<i class="fas fa-user"></i>
 											Register
 										</a>
@@ -174,7 +174,7 @@
 										</div>
 									</li>
 									<li>
-										<a href="#login-modal" class="login-modal-btn">
+										<a href="./login.html" class="login-modal-btn">
 											<i class="fas fa-lock"></i>
 											Login
 										</a>
