@@ -1,7 +1,7 @@
 <?php
 
 	public function visualizzaEventi(){
-		include("connectionDB.php");
+		include("ConnectionDB.php");
 		
 		$query = "SELECT Eventi.* FROM Eventi WHERE data_evento > CURDATE()";
 		
