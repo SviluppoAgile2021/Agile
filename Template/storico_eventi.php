@@ -1,9 +1,3 @@
-<?php
-	session_start();
-	include("../Php/StoricoEventi.php");
-	include("../Php/connectionDB.php");
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,7 +56,7 @@
 <!-- backtotop - end -->
 
 <!-- preloader - start -->
-<div id="preloader"></div>
+<!--<div id="preloader"></div>-->
 <!-- preloader - end -->
 
 
@@ -841,18 +835,17 @@
 						
 						<!-- breadcrumb-title - start -->
 						<div class="breadcrumb-title text-center mb-50">
-							<span class="sub-title">harmoni events</span>
-							<h2 class="big-title">harmoni <strong>event</strong></h2>
+							<h2 class="big-title">Storico Eventi</h2>
 						</div>
 						<!-- breadcrumb-title - end -->
 						
 						<!-- breadcrumb-list - start -->
-						<div class="breadcrumb-list">
-							<ul>
-								<li class="breadcrumb-item"><a href="index-1.html" class="breadcrumb-link">Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">event listing</li>
-							</ul>
-						</div>
+<!--						<div class="breadcrumb-list">-->
+<!--							<ul>-->
+<!--								<li class="breadcrumb-item"><a href="index-1.html" class="breadcrumb-link">Home</a></li>-->
+<!--								<li class="breadcrumb-item active" aria-current="page">event listing</li>-->
+<!--							</ul>-->
+<!--						</div>-->
 						<!-- breadcrumb-list - end -->
 					
 					</div>
@@ -870,53 +863,15 @@
 
 <!-- event-search-section - start
 ================================================== -->
-<section id="event-search-section" class="event-search-section clearfix" style="background-image: url(assets/images/special-offer-bg.png);">
-	<div class="container">
-		<div class="row">
-			
-			<!-- section-title - start -->
-			<div class="col-lg-4 col-md-12 col-sm-12">
-				<div class="section-title">
-					<small class="sub-title">Find best event on Harmoni</small>
-					<h2 class="big-title">event <strong>Search</strong></h2>
-				</div>
-			</div>
-			<!-- section-title - end -->
-			
-			<!-- search-form - start -->
-			<div class="col-lg-8 col-md-12 col-sm-12">
-				<div class="search-form form-wrapper">
-					<form action="#!">
-						
-						<ul>
-							<li>
-								<span class="title">event keyword</span>
-								<div class="form-item">
-									<input type="search" placeholder="Event name,location,etc">
-								</div>
-							</li>
-							<li>
-								<span class="title">event category</span>
-								<select id="event-category-select">
-									<option selected="">Conference</option>
-									<option value="1">Option 1</option>
-									<option value="2">Option 2</option>
-									<option value="3">Option 3</option>
-								</select>
-							</li>
-							<li>
-								<button type="submit" class="submit-btn">search event now</button>
-							</li>
-						</ul>
-					
-					</form>
-				</div>
-			</div>
-			<!-- search-form - end -->
-		
-		</div>
-	</div>
-</section>
+<!--<section id="event-search-section" class="event-search-section clearfix">-->
+<!--	<div class="container">-->
+<!--		<div class="row">-->
+<!--			-->
+<!--			-->
+<!--		-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</section>-->
 <!-- event-search-section - end
 ================================================== -->
 
@@ -931,131 +886,76 @@
 		<div class="row">
 			
 			<!-- sidebar-section - start -->
-			<div class="col-lg-3 col-md-12 col-sm-12">
-				<div class="sidebar-section">
-					
-					<!-- Add to Calendar - start -->
-					<div title="Add to Calendar" class="addeventatc">
-						Add to Calendar
-						<span class="start">06/18/2015 09:00 AM</span>
-						<span class="end">06/18/2015 11:00 AM</span>
-						<span class="timezone">Europe/Paris</span>
-						<span class="title">Summary of the event</span>
-						<span class="description">Description of the event</span>
-						<span class="location">Location of the event</span>
-						<span class="organizer">Organizer</span>
-						<span class="organizer_email">Organizer e-mail</span>
-						<span class="all_day_event">false</span>
-						<span class="date_format">MM/DD/YYYY</span>
-					</div>
-					<!-- Add to Calendar - end -->
-					
-					<!-- map-wrapper - start -->
-					<div class="map-wrapper mb-30">
-						
-						<h2 class="title-small default-color mb-30">Google Map Search</h2>
-						
-						<div id="google-map">
-							<div id="googleMaps" class="google-map-container"></div>
-						</div>
-					
-					</div>
-					<!-- map-wrapper - end -->
-					
-					<!-- spacial-event-wrapper - start -->
-					<div class="spacial-event-wrapper text-center" style="background-image: url(assets/images/spacial-event-bg.jpg);">
-						<div class="overlay-black">
-							<p class="sub-title white-color mb-30">26 DECEMBER 2018</p>
-							<h2 class="title-large white-color mb-30">
-								AMSTERDAM
-								<strong class="yellow-color">PHP CONFERENCE</strong>
-							</h2>
-							<a href="#!" class="custom-btn">booking ticket</a>
-						</div>
-					</div>
-					<!-- spacial-event-wrapper - end -->
-				
-				</div>
-			</div>
+			
 			<!-- sidebar-section - end -->
 			
 			<!-- - start -->
 			<div class="col-lg-9 col-md-12 col-sm-12">
 				
-				<div class="search-result-form">
-					<form action="#!">
-						<ul>
-							
-							<li>
-								<span class="result-text">5 Search results from 20 events</span>
-							</li>
-							<li>
-								<label for="year-select">Years:</label>
-								<select id="year-select">
-									<option selected="">2018</option>
-									<option value="1">2019</option>
-									<option value="2">2020</option>
-									<option value="3">2021</option>
-								</select>
-							</li>
-							<li>
-								<label for="munth-select">Months:</label>
-								<select id="munth-select">
-									<option selected="">June</option>
-									<option value="1">July</option>
-									<option value="2">August</option>
-								</select>
-							</li>
-						
-						</ul>
-					</form>
-					
-					<ul class="nav event-layout-btngroup">
-						<li><a class="active" data-toggle="tab" href="#list-style"><i class="fas fa-th-list"></i></a></li>
-						<li><a data-toggle="tab" href="#grid-style"><i class="fas fa-th"></i></a></li>
-					</ul>
-				</div>
+				
 				
 				<div class="tab-content">
 					<div id="list-style" class="tab-pane fade in active show">
 						
-						<!-- event-item - start -->
-						<div class="event-list-item clearfix">
-							
-							<!-- event-image - start -->
-							<div class="event-image">
-								<div class="post-date">
-									<span class="date">26</span>
-									<small class="month">june</small>
-								</div>
-								<img src="assets/images/event/event-1.jpg" alt="Image_not_found">
-							</div>
-							<!-- event-image - end -->
+						
+       
 							
 							<!-- event-content - start -->
-							<div class="event-content">
-								<?php storicoEventi($_SESSION['id'], $conn); ?>
-							</div>
+							
+								<?php
+                                    include("../Php/ConnectionDB.php");
+									$query = "SELECT Eventi.id, Eventi.nome as Titolo, Eventi.data_evento, Luoghi.nome as Luogo
+                                                FROM partecipano
+                                                JOIN Eventi ON (id_evento=Eventi.id)
+                                                JOIN Luoghi on (Luoghi.id=Eventi.id_luogo)
+                                                WHERE id_utente = 7";
+         
+									$result = mysqli_query($conn, $query);
+									
+									if (mysqli_num_rows($result) == 0) {
+										echo "<tr> <td colspan='4'> Non hai ancora partecipato a nessun evento </td> </tr>";
+									}
+									
+									while ($row = mysqli_fetch_array($result)) {
+                                        
+                                        echo "<!-- event-item - start -->
+						                    <div class='event-list-item clearfix'>";
+                                        
+                                        echo "<!-- event-image - start -->
+                                                <div class='event-image'>
+                                                    <div class='post-date'>
+                                                        <span class='date'>". "" ."</span>
+                                                    </div>
+                                                    <img src='assets/images/event/event-1.jpg' alt='Image_not_found'>
+                                                </div>
+                                                <!-- event-image - end -->";
+										
+										echo "<div class='event-content'>";
+										echo "<div class='event-title mb-15'>
+                                                <h3 class='title'> " . $row['Titolo'] . " </h3>
+                                            </div>";
+										
+										echo "<p class='discription-text mb-30'> " . $row['data_evento'] . " </p>";
+                
+                                        echo "<ul>
+                                                <li>
+                                                    <div class='info-content'>
+                                                        <small>" . $row['Luogo'] ."</small>
+                                                    </div>
+                                                </li>
+                                            </ul>";
+                                        echo "</div>";
+                                        echo "</div>";
+                                        echo "</div>";
+                                        }
+                                ?>
+							
 							<!-- event-content - end -->
 						
-						</div>
+						
 						<!-- event-item - end -->
 						
-						<div class="pagination ul-li clearfix">
-							<ul>
-								<li class="page-item prev-item">
-									<a class="page-link" href="#!">Prev</a>
-								</li>
-								<li class="page-item"><a class="page-link" href="#!">01</a></li>
-								<li class="page-item active"><a class="page-link" href="#!">02</a></li>
-								<li class="page-item"><a class="page-link" href="#!">03</a></li>
-								<li class="page-item"><a class="page-link" href="#!">04</a></li>
-								<li class="page-item"><a class="page-link" href="#!">05</a></li>
-								<li class="page-item next-item">
-									<a class="page-link" href="#!">Next</a>
-								</li>
-							</ul>
-						</div>
+						
 					
 					</div>
 					
