@@ -151,10 +151,10 @@ INSERT INTO `Generi` (`id`, `nome`) VALUES
 
 CREATE TABLE `Gruppi` (
   `id` int(11) NOT NULL,
-  `id_admin_gruppo` int(11) NOT NULL DEFAULT 1,
-  `id_membro_1` int(11) DEFAULT 1,
-  `id_membro_2` int(11) DEFAULT 1,
-  `id_membro_3` int(11) DEFAULT 1
+  `id_admin_gruppo` int(11) NOT NULL,
+  `id_membro_1` int(11) DEFAULT NULL,
+  `id_membro_2` int(11) DEFAULT NULL,
+  `id_membro_3` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -170,7 +170,17 @@ INSERT INTO `Gruppi` (`id`, `id_admin_gruppo`, `id_membro_1`, `id_membro_2`, `id
 -- Trigger `Gruppi`
 --
 DELIMITER $$
-CREATE TRIGGER `formazione_gruppo` AFTER INSERT ON `Gruppi` FOR EACH ROW BEGIN INSERT INTO `formano` (id_utente, id_gruppo) VALUES (NEW.id_admin_gruppo, NEW.id); INSERT INTO `formano` (id_utente, id_gruppo) VALUES (NEW.id_membro_1, NEW.id); INSERT INTO `formano` (id_utente, id_gruppo) VALUES (NEW.id_membro_2, NEW.id); INSERT INTO `formano` (id_utente, id_gruppo) VALUES (NEW.id_membro_3, NEW.id);
+CREATE DEFINER=`sporteal_agile2021`@`%` TRIGGER `formazione_gruppo` AFTER INSERT ON `Gruppi` FOR EACH ROW BEGIN 
+	INSERT INTO `formano` (id_utente, id_gruppo) VALUES (NEW.id_admin_gruppo, NEW.id);
+    if NEW.id_membro_1 IS NOT NULL THEN
+    INSERT INTO `formano` (id_utente, id_gruppo) VALUES (NEW.id_membro_1, NEW.id);
+    END IF;
+    if NEW.id_membro_2 IS NOT NULL THEN
+    INSERT INTO `formano` (id_utente, id_gruppo) VALUES (NEW.id_membro_2, NEW.id);
+    END IF;
+    if NEW.id_membro_3 IS NOT NULL THEN
+    INSERT INTO `formano` (id_utente, id_gruppo) VALUES (NEW.id_membro_3, NEW.id);
+    END IF;
 END
 $$
 DELIMITER ;
