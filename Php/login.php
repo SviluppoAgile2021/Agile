@@ -1,5 +1,4 @@
 <?php
-session_start();
 class Login
     {
         public function loginUtente($usernameInp, $passwordInp, $debug): bool
@@ -18,12 +17,14 @@ class Login
             }
             if ($num == 1) {
                 session_start();
-                $_SESSION['username'] = $usernameInp;
-                $_SESSION['password'] = $passwordInp;
+                $userArray = mysqli_fetch_array($result);
+               // $_SESSION['username'] = $usernameInp;
+               // $_SESSION['password'] = $passwordInp;
+                $_SESSION['id'] = $userArray['id'];
                 //$conn->close();
-                header('location: ../pages/eventiSuggeriti.php');  //qui bisogna mettere il path della home
-                exit();
+                //header('location: ../pages/eventiSuggeriti.php');  //qui bisogna mettere il path della home
                 return true;
+                exit();
             } else {
                 echo "login errato";
                 return false;
