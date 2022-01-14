@@ -151,10 +151,10 @@ INSERT INTO `Generi` (`id`, `nome`) VALUES
 
 CREATE TABLE `Gruppi` (
   `id` int(11) NOT NULL,
-  `id_admin_gruppo` int(11) NOT NULL DEFAULT 1,
-  `id_membro_1` int(11) DEFAULT 1,
-  `id_membro_2` int(11) DEFAULT 1,
-  `id_membro_3` int(11) DEFAULT 1
+  `id_admin_gruppo` int(11) NOT NULL,
+  `id_membro_1` int(11) DEFAULT NULL,
+  `id_membro_2` int(11) DEFAULT NULL,
+  `id_membro_3` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
