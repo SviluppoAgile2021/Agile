@@ -891,7 +891,6 @@
                         <!-- billing-form - start -->
                         <div class="billing-form form-wrapper">
                             <a href="../Template/eliminaUtente.php" class="btn custom-btn">Elimina Utente</a>
-                            <a href="../Template/storicoEventi.php" class="btn custom-btn">Storico Eventi</a>
                         </div>
                         <!-- billing-form - end -->
 
