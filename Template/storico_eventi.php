@@ -908,7 +908,7 @@
                                                 FROM partecipano
                                                 JOIN Eventi ON (id_evento=Eventi.id)
                                                 JOIN Luoghi on (Luoghi.id=Eventi.id_luogo)
-                                                WHERE id_utente = 7";
+                                                WHERE id_utente = '". $_SESSION['id']."' ";
          
 									$result = mysqli_query($conn, $query);
 									
