@@ -903,6 +903,7 @@
 							<!-- event-content - start -->
 							
 								<?php
+                                    session_start();
                                     include("../Php/ConnectionDB.php");
 									$query = "SELECT Eventi.id, Eventi.nome as Titolo, Eventi.data_evento, Luoghi.nome as Luogo
                                                 FROM partecipano
