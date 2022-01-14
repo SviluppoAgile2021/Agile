@@ -3,7 +3,7 @@ include("ConnectionDB.php");
 $q = "select e.nome as nome_evento,e.data_evento,e.capienza,e.prezzo,e.offerta,e.formale,l.nome,l.citta,l.indirizzo,g.nome as genere
 from Eventi e join Luoghi l on (l.id=e.id_luogo)
 join Generi g on (e.id_genere=g.id) 
-where e.id=1";
+where e.id=2";
 $ris = mysqli_query($conn, $q);
 while ($rigaCorrente = $ris->fetch_array()) {
     $nomeEvento = $rigaCorrente['nome_evento'];
@@ -59,8 +59,18 @@ while ($rigaCorrente = $ris->fetch_array()) {
     if($a==9){
         echo $time;
     }
-
-
+    if($a==10){
+        echo "  <span class='start'>$d $time </span>
+                <span class='end'>$d </span>
+                <span class='timezone'>Europe/Rome</span>
+                <span class='title'>$nomeEvento</span>
+                <span class='description'>Evento $genereEvento</span>
+                <span class='location'>$luogo $indirizzo</span>
+                <span class='organizer'>Organizer</span>
+                <span class='organizer_email'>organizzazione@email.com</span>
+                <span class='all_day_event'>false</span>
+                <span class='date_format'>YYYY/MM/DD</span>";
+    }
 
 }
 mysqli_close($conn);

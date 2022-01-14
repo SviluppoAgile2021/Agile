@@ -56,7 +56,7 @@
 		<!-- backtotop - end -->
 
 		<!-- preloader - start -->
-		<div id="preloader"></div>
+
 		<!-- preloader - end -->
 
 
@@ -1108,17 +1108,7 @@
 								<div class="button">
                                     <div title="" class="addeventatc" id="addeventatc1" aria-haspopup="true" aria-expanded="false" tabindex="0" style="visibility: visible;">
                                         Aggiungi l'evento al calendario
-                                        <span class="start atc_node">06/18/2015 09:00 AM</span>
-                                        <span class="end atc_node">06/18/2015 11:00 AM</span>
-                                        <span class="timezone atc_node">Europe/Paris</span>
-                                        <span class="title atc_node">Summary of the event</span>
-                                        <span class="description atc_node">Description of the event</span>
-                                        <span class="location atc_node">Location of the event</span>
-                                        <span class="organizer atc_node">Organizer</span>
-                                        <span class="organizer_email atc_node">Organizer e-mail</span>
-                                        <span class="all_day_event atc_node">false</span>
-                                        <span class="date_format atc_node">MM/DD/YYYY</span>
-                                        <span class="addeventatc_icon atc_node"></span>
+                                        <?php $a=10; include("../Php/eventoSingolo.php"); ?>
                                     </div>
 								</div>
 

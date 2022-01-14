@@ -40,6 +40,10 @@
                 <?php include("../Php/stampaGeneri.php"); ?>
             </select>
 
+            <select class="country-select"  name="admin3" id="admin3" required>
+                <?php include("../Php/stampaUtenti.php"); ?>
+            </select>
+
             <br>
             <br>
             <input type="submit" value="Invia">

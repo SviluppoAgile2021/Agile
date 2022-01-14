@@ -56,7 +56,7 @@
 		<!-- backtotop - end -->
 
 		<!-- preloader - start -->
-		<div id="preloader"></div>
+
 		<!-- preloader - end -->
 
 
@@ -920,7 +920,13 @@
                                 Tra gli eventi attualmente in offerta : <?php $a=7; include("../Php/eventoSingolo.php"); ?>
                             </p>
 
-
+                            <?php $a=0; include("../Php/eventoSingolo.php");
+                                if($formale=="Si"){
+                                    echo "Contattaci a organizzatore@mail.it";
+                                }else{
+                                    echo "<button type='submit' class='custom-btn'>Acquista ticket</button>";
+                                }
+                                ?>
 
 						</div>
 						<!-- event-details - end -->
@@ -1013,16 +1019,17 @@
 							<!-- Add to Calendar - start -->
 							<div title="Add to Calendar" class="addeventatc">
 								Aggiungi l'evento al calendario
-								<span class="start">06/18/2015 09:00 AM</span>
+                                <?php $a=10; include("../Php/eventoSingolo.php"); ?>
+								<!-- <span class="start">06/18/2015 09:00 AM</span>
 								<span class="end">06/18/2015 11:00 AM</span>
-								<span class="timezone">Europe/Paris</span>
+								<span class="timezone">Europe/Rome</span>
 								<span class="title">Summary of the event</span>
 								<span class="description">Description of the event</span>
 								<span class="location">Location of the event</span>
 								<span class="organizer">Organizer</span>
 								<span class="organizer_email">Organizer e-mail</span>
 								<span class="all_day_event">false</span>
-								<span class="date_format">MM/DD/YYYY</span>
+								<span class="date_format">MM/DD/YYYY</span> -->
 							</div>
 							<!-- Add to Calendar - end -->
 

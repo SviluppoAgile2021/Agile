@@ -56,7 +56,7 @@
 		<!-- backtotop - end -->
 
 		<!-- preloader - start -->
-		<div id="preloader"></div>
+
 		<!-- preloader - end -->
 
 
@@ -929,18 +929,21 @@
                                         <label><strong> 1 Admin supplementare (opzionale) :</strong></label>
                                         <div class="form-item">
                                             <select class="country-select"  name="admin1" id="admin1" required>
+                                                <option value="-1" selected> (nessuno) </option>
                                                 <?php include("../Php/stampaUtenti.php"); ?>
                                             </select>
                                         </div>
                                         <label><strong> 2 Admin supplementare (opzionale) :</strong></label>
                                         <div class="form-item">
                                             <select class="country-select"  name="admin2" id="admin2" required>
+                                                <option value="-1" selected> (nessuno) </option>
                                                 <?php include("../Php/stampaUtenti.php"); ?>
                                             </select>
                                         </div>
                                         <label><strong> 3 Admin supplementare (opzionale) :</strong></label>
                                         <div class="form-item">
                                             <select class="country-select"  name="admin3" id="admin3" required>
+                                                <option value="-1" selected> (nessuno) </option>
                                                 <?php include("../Php/stampaUtenti.php"); ?>
                                             </select>
                                         </div>
@@ -1203,9 +1206,9 @@
 		<script src="assets/js/slick.min.js"></script>
 		<script src="assets/js/owl.carousel.min.js"></script>
 
-		<!-- map jquery include
+		<!-- map jquery include -->
 		<script src="assets/js/gmap3.min.js"></script>
-		<script src="http://maps.google.com/maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA"></script> -->
+		<script src="http://maps.google.com/maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA"></script>
 
 		<!-- calendar jquery include -->
 		<script src="assets/js/atc.min.js"></script>
