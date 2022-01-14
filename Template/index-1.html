@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 	<head>
 
@@ -42,10 +42,6 @@
 
 	<body>
 
-
-
-
-		
 		<!-- backtotop - start -->
 		<div id="thetop" class="thetop"></div>
 		<div class='backtotop'>
@@ -58,8 +54,6 @@
 		<!-- preloader - start -->
 		<div id="preloader"></div>
 		<!-- preloader - end -->
-
-
 
 
 
@@ -232,40 +226,27 @@
 
 																<div class="mb-30">
 																	<h2 class="form-title title-large white-color">Account <strong>Login</strong></h2>
-																	<span class="form-subtitle white-color">Login to our website, or <strong>REGISTER</strong></span>
+																	<span class="form-subtitle white-color">Login to our website, or <a href="signup.html">REGISTER</a></span>
 																</div>
 
-																<div class="fb-login-btn mb-30">
-																	<a href="#!">
-																		<span class="icon">
-																			<i class="fab fa-facebook-f"></i>
-																		</span>
-																		login with facebook
-																	</a>
-																</div>
 
 																<div class="or-text mb-30">
 																	<span>or sign in</span>
 																</div>
 
 																<div class="login-form text-center mb-50">
-																	<form action="#!">
+																	<form action="../Php/loginController.php" method="POST">
 																		<div class="form-item">
-																			<input type="email" placeholder="example@gmail.com">
+																			<input type="text" name="username" id="username" class="input" placeholder="Enter your username" required>
 																		</div>
 																		<div class="form-item">
-																			<input type="password" placeholder="Password">
+																			<input type="password" name="password" id="password" class="input" placeholder="Enter your password" required>
 																		</div>
 																		<button type="submit" class="login-btn">login now</button>
 																	</form>
 																</div>
 
-																<div class="bottom-text white-color">
-																	<p class="m-0">
-																		* Denotes mandatory field.
-																	</p>
-																	<p class="m-0">** At least one telephone number is required.</p>
-																</div>
+
 
 															</div>
 															<!-- rightside-content - end -->
@@ -276,6 +257,7 @@
 
 														</div>
 													</div>
+
 												</li>
 												<li>
 													<button type="button" class="toggle-overlay search-btn">
@@ -623,7 +605,7 @@
 											<div class="login-form text-center mb-50">
 												<form action="#!">
 													<div class="form-item">
-														<input type="email" placeholder="example@gmail.com">
+														<input type="text" placeholder="example@gmail.com">
 													</div>
 													<div class="form-item">
 														<input type="password" placeholder="Password">
