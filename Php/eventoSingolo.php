@@ -3,7 +3,7 @@ include("ConnectionDB.php");
 $q = "select e.nome as nome_evento,e.data_evento,e.capienza,e.prezzo,e.offerta,e.formale,l.nome,l.citta,l.indirizzo,g.nome as genere
 from Eventi e join Luoghi l on (l.id=e.id_luogo)
 join Generi g on (e.id_genere=g.id) 
-where e.id=2";
+where e.id='". $id ."'";
 $ris = mysqli_query($conn, $q);
 while ($rigaCorrente = $ris->fetch_array()) {
     $nomeEvento = $rigaCorrente['nome_evento'];

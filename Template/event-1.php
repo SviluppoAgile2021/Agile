@@ -552,7 +552,7 @@
                                                                     </div>
                                                                 </li>
                                                                 <li>
-                                                                    <a href='./event-details.html' class='tickets-details-btn'> tickets & details</a>
+                                                                    <a href='./eventDetails.php?idEvento=". $entry['id'] ."' class='tickets-details-btn'> tickets & details</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
