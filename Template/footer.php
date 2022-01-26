@@ -1,4 +1,3 @@
-<?php session_start();?>
 <footer id="footer-section" class="footer-section default-footer-section clearfix">
 	
 	<!-- footer-top - start -->
