@@ -512,11 +512,8 @@
 						<div class="tab-content">
 							<div id="list-style" class="tab-pane fade in active show">
 
-								<!-- event-item - start -->
-								<div class="event-list-item clearfix">
-
-									<!-- event-content - start -->
-									<div class="event-content">
+								
+          
 										<?php
 											include("../Php/ConnectionDB.php");
 											
@@ -532,11 +529,26 @@
 												$res = @mysqli_query($conn, $query);
 												while ($entry = mysqli_fetch_array($res))
 												{
-                                                    echo "<div class='event-list-item clearfix'>";
+                                                    echo "<!-- event-item - start -->
+								                            <div class='event-list-item clearfix'>
+                                                            <!-- event-image - start -->
+                                                            <div class='event-image'>
+                                                                <div class='post-date'>
+                                                                    <span class='date'>26</span>
+                                                                    <small class='month'>june</small>
+                                                                </div>
+                                                                <img src='assets/images/event/". $entry['id_genere'] .".jpg' alt='Image_not_found'>
+                                                            </div>
+                                                            <!-- event-image - end -->
+                                                            
+									                        <!-- event-content - start -->
+									                        <div class='event-content'>";
 													//titolo dell'evento
-													echo "<h3 class='title'>". $entry['nome'] ."</h3>";
+													echo "<div class='event-title mb-15''>
+                                                            <h3 class='title'>". $entry['nome'] ."</h3>
+                                                            </div>";
 													//prezzo
-													echo "<span class='ticket-price yellow-color'>". $entry['prezzo'] ."</span>";
+													echo "<span class='ticket-price yellow-color'>". $entry['prezzo'] ." EUR </span>";
 													//data
 													echo "<p class='discription-text mb-30'>". $entry['data_evento'] ."</p>";
 													//dettagli
@@ -557,6 +569,10 @@
                                                             </ul>
                                                         </div>
                                                         </div>
+                                                    <!-- event-content - end -->
+                
+                                                </div>
+                                                <!-- event-item - end -->
                                                     ";
 												}
 											}
@@ -564,11 +580,7 @@
 												echo("Nessun evento risulta disponibile al momento.");
 											}
                                         ?>
-									</div>
-									<!-- event-content - end -->
-
-								</div>
-								<!-- event-item - end -->
+									
 
 								
 
