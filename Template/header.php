@@ -227,6 +227,7 @@
 											<ul class="sub-menu">
 												<li class="menu-item-has-children">
 													<a href="creazioneEvento.php"> Crea un evento </a>
+                                                    <a href="storico_eventi.php"> Storico eventi </a>
 												</li>
 											</ul>
 										</li>
@@ -234,21 +235,21 @@
 								</div>
 							</div>
 							<!-- menu-item-list - end -->
-							
-							<!-- menu-item-list - start -->
-							<div class="col-lg-2">
-								<div class="user-search-btn-group ul-li clearfix">
-									<ul>
-										<li>
-											<a href="#!">
-												<i class="fas fa-user"></i>
-											</a>
-										</li>
-										
-									</ul>
-								</div>
-							</div>
-							<!-- menu-item-list - end -->
+
+                            <!-- menu-item-list - start -->
+                            <div class="col-lg-2">
+                                <div class="user-search-btn-group ul-li clearfix">
+                                    <ul>
+                                        <li>
+                                            <a href="adminPortalePage.php">
+                                                <i class="fas fa-user"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- menu-item-list - end -->
 						
 						</div>
 					</div>
