@@ -9,9 +9,9 @@ class contactTest extends TestCase
         $contact = new Contact();
 
         //Commento normale
-        $this->assertTrue($contact->addComment("commentotest",1,1,true));
+        $this->assertTrue($contact->addComment("commentotest",2,1,true));
         //Commento con caratteri di cui fare escape
-        $this->assertTrue($contact->addComment("'prova123",1,1,true));
+        $this->assertTrue($contact->addComment("'prova123",2,1,true));
 
     }
 }

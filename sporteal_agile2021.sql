@@ -252,7 +252,7 @@ CREATE TABLE `Utenti` (
 
 --
 -- Dump dei dati per la tabella `Utenti`
---'
+--
 
 
 INSERT INTO `Utenti` (`id`, `nome`, `cognome`, `data_nascita`, `citta`, `username`, `pwd`) VALUES
