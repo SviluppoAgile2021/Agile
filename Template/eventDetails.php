@@ -42,7 +42,7 @@
 
 	<body class="default-header-p">
 
-
+    <?php session_start(); ?>
 
 
 		
@@ -930,7 +930,23 @@
 
 						</div>
 						<!-- event-details - end -->
+                        <!-- reviewer-comment-wrapper - start -->
+                        <div class="reviewer-comment-wrapper mb-30 clearfix">
 
+                            <div class="section-title text-left mb-50">
+                                <h2 class="big-title"> <strong>Commenti</strong> Evento</h2>
+                            </div>
+
+                            <div class="comment-bar clearfix">
+
+                            <?php
+                            include("../Php/stampaCommenti.php");
+                            ?>
+
+                            </div>
+
+                        </div>
+                        <!-- reviewer-comment-wrapper - end -->
 
 						<!-- comment-form - start -->
 						<div class="comment-form clearfix">
@@ -966,37 +982,37 @@
 							</div>
 
 							<div class="form-wrapper">
-								<form action="contact.php">
+								<form action="../Php/contactController.php" method="post">
 									<div class="row">
 
 										<!-- form-item - start -->
 										<div class="col-lg-4 col-md-6 col-sm-12">
 											<div class="form-item mb-30">
-												<input type="text" name="name" placeholder="Your Name" required>
+												 <?php  echo "Stai commentando come".$_SESSION['username']; ?>
 											</div>
 										</div>
 										<!-- form-item - end -->
 
-										<!-- form-item - start -->
-										<div class="col-lg-4 col-md-6 col-sm-12">
-											<div class="form-item mb-30">
-												<input type="email" name="email" placeholder="Your Email Address" required>
-											</div>
-										</div>
-										<!-- form-item - end -->
-
-										<!-- form-item - start -->
+										<!-- form-item - start
 										<div class="col-lg-4 col-md-12 col-sm-12">
 											<div class="form-item mb-30">
-												<input type="tel" name="phone" placeholder="Your Phone" required>
+												<input type="number" name="idUtente"  value=""placeholder="Your Phone" required hidden>
 											</div>
 										</div>
-										<!-- form-item - end -->
+										 form-item - end -->
+
+                                        <!-- form-item - start -->
+                                        <div class="col-lg-4 col-md-12 col-sm-12">
+                                            <div class="form-item mb-30">
+                                                <?php $a=11; include("../Php/eventoSingolo.php"); ?>
+                                            </div>
+                                        </div>
+                                        <!-- form-item - end -->
 
 										<!-- form-item - start -->
 										<div class="col-lg-12 col-md-12 col-sm-12">
 											<div class="mb-30">
-												<textarea name="message" placeholder="Your Comment" required></textarea>
+												<textarea name="comment" placeholder="Your Comment" required></textarea>
 											</div>
 											<button type="submit" class="custom-btn">SUBMIT NOW</button>
 										</div>

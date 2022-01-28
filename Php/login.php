@@ -18,7 +18,7 @@ class Login
             if ($num == 1) {
                 session_start();
                 $userArray = mysqli_fetch_array($result);
-               // $_SESSION['username'] = $usernameInp;
+                $_SESSION['username'] = $usernameInp;
                // $_SESSION['password'] = $passwordInp;
                 $_SESSION['id'] = $userArray['id'];
                 //$conn->close();
