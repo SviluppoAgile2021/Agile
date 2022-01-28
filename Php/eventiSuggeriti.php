@@ -13,7 +13,7 @@ class eventiSuggeriti{
                         FROM partecipano
                         inner join Utenti on partecipano.id_utente=Utenti.id
                         inner join Eventi on partecipano.id_evento = Eventi.id
-                        where username = '$usernameEv' AND pwd ='$passwordEv' "; //restituisce tutti gli eventi di un utente
+                        where username = '$usernameEv' AND pwd ='$passwordEv'"; //restituisce tutti gli eventi di un utente
         echo $usernameEv;
         echo $passwordEv;
         if (isset($conn)) {
