@@ -207,7 +207,7 @@
 											<div class="form-item mb-30">
 
 												 <?php  echo "Stai commentando come ".$_SESSION['username']; ?>
-                                                
+
 											</div>
 										</div>
 										<!-- form-item - end -->

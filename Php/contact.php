@@ -11,10 +11,6 @@ class Contact
         }
 
 
-        /* If e-mail is not valid show error message
-        if (!filter_var($emailInp, FILTER_VALIDATE_EMAIL)) {
-            // invalid e-mail address
-            echo "Email non valida";*/
         $commentInp = mysqli_real_escape_string($conn,$commentInp);
 
 
