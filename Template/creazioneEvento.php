@@ -110,7 +110,7 @@
             if(isset($_SESSION['id'])){
                 include ("creaEventoUtenteLoggato.php");
             }else{
-                include ("creaEventoUtenteNonLog.php");
+                include("areaRiservata.php");
             }
 
 		?>

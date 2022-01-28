@@ -515,31 +515,35 @@
 								
           
 										<?php
-											include("../Php/ConnectionDB.php");
+                                            if(!isset($_SESSION['id'])){
+	                                            include "areaRiservata.php";
+                                            }
 											
-											$query = "SELECT  *
+											else {
+												include("../Php/ConnectionDB.php");
+												
+												$query = "SELECT  *
                                                         FROM partecipano
                                                         inner join Utenti on partecipano.id_utente=Utenti.id
                                                         inner join Eventi on partecipano.id_evento = Eventi.id
-                                                        where Utenti.id = '".$_SESSION['id']."'";
-											
-											$ris = mysqli_query($conn, $query);
-											if($res === FALSE){
-												die(mysqli_error($conn));
-											}
-											if(mysqli_num_rows($ris) < 1){
-                                                echo "<h3 class='title'> Nessun evento trovato </h3>";
-                                            }
-                                            
-                                            while($rigaCorrente = $ris->fetch_array()){
-                                                $idGenere = $rigaCorrente['id_genere'];
-                                                $query = "SELECT * FROM Eventi WHERE id_genere = '". $idGenere."' LIMIT 5";
-                                                $res = mysqli_query($conn, $query);
-	                                            if(!empty($res)){
-		                                            $res = @mysqli_query($conn, $query);
-		                                            while ($entry = mysqli_fetch_array($res))
-		                                            {
-			                                            echo "<!-- event-item - start -->
+                                                        where Utenti.id = '" . $_SESSION['id'] . "'";
+												
+												$ris = mysqli_query($conn, $query);
+												if ($res === FALSE) {
+													die(mysqli_error($conn));
+												}
+												if (mysqli_num_rows($ris) < 1) {
+													echo "<h3 class='title'> Nessun evento trovato </h3>";
+												}
+												
+												while ($rigaCorrente = $ris->fetch_array()) {
+													$idGenere = $rigaCorrente['id_genere'];
+													$query = "SELECT * FROM Eventi WHERE id_genere = '" . $idGenere . "' LIMIT 5";
+													$res = mysqli_query($conn, $query);
+													if (!empty($res)) {
+														$res = @mysqli_query($conn, $query);
+														while ($entry = mysqli_fetch_array($res)) {
+															echo "<!-- event-item - start -->
 								                            <div class='event-list-item clearfix'>
                                                             <!-- event-image - start -->
                                                             <div class='event-image'>
@@ -547,22 +551,22 @@
                                                                     <span class='date'>  </span>
                                                                     <small class='month'>    </small>
                                                                 </div>
-                                                                <img src='assets/images/event/". $entry['id_genere'] .".jpg' alt='Image_not_found'>
+                                                                <img src='assets/images/event/" . $entry['id_genere'] . ".jpg' alt='Image_not_found'>
                                                             </div>
                                                             <!-- event-image - end -->
                                                             
 									                        <!-- event-content - start -->
 									                        <div class='event-content'>";
-			                                            //titolo dell'evento
-			                                            echo "<div class='event-title mb-15''>
-                                                            <h3 class='title'>". $entry['nome'] ."</h3>
+															//titolo dell'evento
+															echo "<div class='event-title mb-15''>
+                                                            <h3 class='title'>" . $entry['nome'] . "</h3>
                                                             </div>";
-			                                            //prezzo
-			                                            echo "<span class='ticket-price yellow-color'>". $entry['prezzo'] ." EUR </span>";
-			                                            //data
-			                                            echo "<p class='discription-text mb-30'>". $entry['data_evento'] ."</p>";
-			                                            //dettagli
-			                                            echo "<div class='event-info-list ul-li clearfix'>
+															//prezzo
+															echo "<span class='ticket-price yellow-color'>" . $entry['prezzo'] . " EUR </span>";
+															//data
+															echo "<p class='discription-text mb-30'>" . $entry['data_evento'] . "</p>";
+															//dettagli
+															echo "<div class='event-info-list ul-li clearfix'>
                                                             <ul>
                                                                 <li>
                                                                     <span class='icon'>
@@ -570,11 +574,11 @@
                                                                     </span>
                                                                     <div class='info-content'>
                                                                         <small>Capienza massima</small>
-                                                                            <h3>". $entry['capienza'] ."</h3>
+                                                                            <h3>" . $entry['capienza'] . "</h3>
                                                                     </div>
                                                                 </li>
                                                                 <li>
-                                                                    <a href='./eventDetails.php?idEvento=". $entry['id'] ."' class='tickets-details-btn'> tickets & details</a>
+                                                                    <a href='./eventDetails.php?idEvento=" . $entry['id'] . "' class='tickets-details-btn'> tickets & details</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -584,14 +588,13 @@
                                                 </div>
                                                 <!-- event-item - end -->
                                                     ";
-		                                            }
-	                                            }
-	                                            else {
-		                                            echo("Nessun evento risulta disponibile al momento.");
-	                                            }
-                                            }
-											
-											
+														}
+													} else {
+														echo("Nessun evento risulta disponibile al momento.");
+													}
+												}
+												
+											}
                                         ?>
 									
 

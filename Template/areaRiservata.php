@@ -11,7 +11,7 @@
 
                         <!-- section-title - start -->
                         <div class="section-title mb-30">
-                            <h2 class="big-title">Effettua il <a href="login.html">login</a> per accedere alla sezione di creazione evento</h2>
+                            <h2 class="big-title">Effettua il <a href="login.html">login</a> per accedere a questa sezione</h2>
                         </div>
                         <!-- section-title - end -->
 
