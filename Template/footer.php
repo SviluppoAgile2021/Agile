@@ -122,7 +122,8 @@
 							<li><a href="event-1.php">Tutti gli Eventi</a></li>
 							<li><a href="signup.html">Signup</a></li>
 							<li><a href="login.html">Login</a></li>
-						</ul>
+                            <li><a href="logout.php">Logout</a></li>
+                        </ul>
 					
 					</div>
 				</div>
