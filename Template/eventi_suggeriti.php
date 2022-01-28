@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-		<title>Harmoni - Event Details</title>
+		<title>Harmoni - Event List</title>
 		<link rel="shortcut icon" href="assets/images/favicon.png">
 
 		<!-- fraimwork - css include -->
@@ -56,7 +56,7 @@
 		<!-- backtotop - end -->
 
 		<!-- preloader - start -->
-
+<!--		<div id="preloader"></div>-->
 		<!-- preloader - end -->
 
 
@@ -157,8 +157,8 @@
 									our Services
 								</a>
 							</li>
-							<li>
-								<a href="event-1.html">
+							<li class="active">
+								<a href="event-1.php">
 									<span class="icon"><i class="fas fa-home"></i></span>
 									event list
 								</a>
@@ -219,7 +219,7 @@
 									event booking
 								</a>
 							</li>
-							<li class="active">
+							<li>
 								<a href="event-details.html">
 									<span class="icon"><i class="fas fa-home"></i></span>
 									event details
@@ -465,18 +465,13 @@
 
 								<!-- breadcrumb-title - start -->
 								<div class="breadcrumb-title text-center mb-50">
-									<h2 class="big-title">Evento in dettaglio<h2>
+									<h2 class="big-title"> <strong>eventi</strong></h2>
 								</div>
 								<!-- breadcrumb-title - end -->
 
 								<!-- breadcrumb-list - start -->
-								<!-- <div class="breadcrumb-list">
-									<ul>
-										<li class="breadcrumb-item"><a href="index-1.html" class="breadcrumb-link">Home</a></li>
-										<li class="breadcrumb-item active" aria-current="page">booking</li>
-									</ul>
-								</div>
-								 breadcrumb-list - end -->
+								
+								<!-- breadcrumb-list - end -->
 
 							</div>
 						</div>
@@ -486,192 +481,138 @@
 		</section>
 		<!-- breadcrumb-section - end
 		================================================== -->
-		<!-- event-details-section - start
+
+
+
+
+
+		<!-- event-search-section - start
 		================================================== -->
-		<section id="event-details-section" class="event-details-section sec-ptb-100 clearfix">
+		
+		<!-- event-search-section - end
+		================================================== -->
+
+
+
+
+
+		<!-- event-section - start
+		================================================== -->
+		<section id="event-section" class="event-section bg-gray-light sec-ptb-100 clearfix">
 			<div class="container">
 				<div class="row">
 
-					<!-- col - event-details - start -->
-					<div class="col-lg-8 col-md-12 col-sm-12">
-
-						<!-- event-details - start -->
-						<div class="event-details mb-80">
-
-							<div class="event-title mb-30">
-								<h2 class="event-title"><?php $a=1; $id = $_GET['idEvento']; include("../Php/eventoSingolo.php"); ?></strong></h2>
-							</div>
-
-							<div class="event-info-list ul-li clearfix mb-50">
-								<ul>
-									<li>
-										<span class="icon">
-											<i class="far fa-calendar"></i>
-										</span>
-										<div class="event-content">
-											<small class="event-title">Data :</small>
-											<h3 class="event-date"><?php $a=2; include("../Php/eventoSingolo.php"); ?></h3>
-										</div>
-									</li>
-									<li>
-										<span class="icon">
-											<i class="far fa-clock"></i>
-										</span>
-										<div class="event-content">
-											<small class="event-title">Orario </small>
-											<h3 class="event-date"><?php $a=9; include("../Php/eventoSingolo.php"); ?></h3>
-										</div>
-									</li>
-									<li>
-										<span class="icon">
-											<i class="fas fa-map-marker-alt"></i>
-										</span>
-										<div class="event-content">
-											<small class="event-title">Locazione</small>
-											<h3 class="event-date"><?php $a=3; include("../Php/eventoSingolo.php"); ?></h3>
-										</div>
-									</li>
-								</ul>
-							</div>
-                            <p class="black-color mb-30">
-                                Luogo dell'evento : <?php $a=8; include("../Php/eventoSingolo.php"); ?>
-                            </p>
-
-							<p class="black-color mb-30">
-								Genere di evento : <?php $a=4; include("../Php/eventoSingolo.php"); ?>
-							</p>
-                            <p class="black-color mb-30">
-                                Capienza massima del luogo : <?php $a=5; include("../Php/eventoSingolo.php"); ?> posti
-                            </p>
-                            <p class="black-color mb-30">
-                                Evento formale : <?php $a=6; include("../Php/eventoSingolo.php"); ?>
-                            </p>
-                            <p class="black-color mb-30">
-                                Tra gli eventi attualmente in offerta : <?php $a=7; include("../Php/eventoSingolo.php"); ?>
-                            </p>
-
-                            <?php $a=0; include("../Php/eventoSingolo.php");
-                                if($formale=="Si"){
-                                    echo "Contattaci a organizzatore@mail.it";
-                                }else{
-                                    echo "<button type='submit' class='custom-btn'>Acquista ticket</button>";
-                                }
-                                ?>
-
-						</div>
-						<!-- event-details - end -->
-
-
-						<!-- comment-form - start -->
-						<div class="comment-form clearfix">
-
-							<div class="section-title text-left mb-50">
-								<h2 class="big-title">write a <strong>comment</strong></h2>
-
-								<div class="rateing-star-wrapper">
-									<span class="rating-title float-left">Your Rating:</span>
-									<div class="rateing-star-form float-right">
-										<form action="#">
-
-											<div class="form-check clearfix">
-												<input type="checkbox">
-											</div>
-											<div class="form-check clearfix">
-												<input type="checkbox">
-											</div>
-											<div class="form-check clearfix">
-												<input type="checkbox">
-											</div>
-											<div class="form-check clearfix">
-												<input type="checkbox">
-											</div>
-											<div class="form-check clearfix">
-												<input type="checkbox">
-											</div>
-
-										</form>
-									</div>
-								</div>
-
-							</div>
-
-							<div class="form-wrapper">
-								<form action="contact.php">
-									<div class="row">
-
-										<!-- form-item - start -->
-										<div class="col-lg-4 col-md-6 col-sm-12">
-											<div class="form-item mb-30">
-												<input type="text" name="name" placeholder="Your Name" required>
-											</div>
-										</div>
-										<!-- form-item - end -->
-
-										<!-- form-item - start -->
-										<div class="col-lg-4 col-md-6 col-sm-12">
-											<div class="form-item mb-30">
-												<input type="email" name="email" placeholder="Your Email Address" required>
-											</div>
-										</div>
-										<!-- form-item - end -->
-
-										<!-- form-item - start -->
-										<div class="col-lg-4 col-md-12 col-sm-12">
-											<div class="form-item mb-30">
-												<input type="tel" name="phone" placeholder="Your Phone" required>
-											</div>
-										</div>
-										<!-- form-item - end -->
-
-										<!-- form-item - start -->
-										<div class="col-lg-12 col-md-12 col-sm-12">
-											<div class="mb-30">
-												<textarea name="message" placeholder="Your Comment" required></textarea>
-											</div>
-											<button type="submit" class="custom-btn">SUBMIT NOW</button>
-										</div>
-										<!-- form-item - end -->
-
-									</div>
-								</form>
-							</div>
-
-						</div>
-						<!-- comment-form - end -->
-
-					</div>
-					<!-- col - event-details - end -->
-
 					<!-- sidebar-section - start -->
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="sidebar-section">
-
-							<!-- Add to Calendar - start -->
-							<div title="Add to Calendar" class="addeventatc">
-								Aggiungi l'evento al calendario
-                                <?php $a=10; include("../Php/eventoSingolo.php"); ?>
-								<!-- <span class="start">06/18/2015 09:00 AM</span>
-								<span class="end">06/18/2015 11:00 AM</span>
-								<span class="timezone">Europe/Rome</span>
-								<span class="title">Summary of the event</span>
-								<span class="description">Description of the event</span>
-								<span class="location">Location of the event</span>
-								<span class="organizer">Organizer</span>
-								<span class="organizer_email">Organizer e-mail</span>
-								<span class="all_day_event">false</span>
-								<span class="date_format">MM/DD/YYYY</span> -->
-							</div>
-							<!-- Add to Calendar - end -->
-
-							
-						</div>
-					</div>
+     
 					<!-- sidebar-section - end -->
+
+					<!-- - start -->
+					<div class="col-lg-9 col-md-12 col-sm-12">
+
+						<div class="tab-content">
+							<div id="list-style" class="tab-pane fade in active show">
+
+								
+          
+										<?php
+											include("../Php/ConnectionDB.php");
+											
+											$query = "SELECT  *
+                                                        FROM partecipano
+                                                        inner join Utenti on partecipano.id_utente=Utenti.id
+                                                        inner join Eventi on partecipano.id_evento = Eventi.id
+                                                        where Utenti.id = '".$_SESSION['id']."'";
+											
+											$ris = mysqli_query($conn, $query);
+											if($res === FALSE){
+												die(mysqli_error($conn));
+											}
+											if(mysqli_num_rows($ris) < 1){
+                                                echo "<h3 class='title'> Nessun evento trovato </h3>";
+                                            }
+                                            
+                                            while($rigaCorrente = $ris->fetch_array()){
+                                                $idGenere = $rigaCorrente['id_genere'];
+                                                $query = "SELECT * FROM Eventi WHERE id_genere = '". $idGenere."' LIMIT 5";
+                                                $res = mysqli_query($conn, $query);
+	                                            if(!empty($res)){
+		                                            $res = @mysqli_query($conn, $query);
+		                                            while ($entry = mysqli_fetch_array($res))
+		                                            {
+			                                            echo "<!-- event-item - start -->
+								                            <div class='event-list-item clearfix'>
+                                                            <!-- event-image - start -->
+                                                            <div class='event-image'>
+                                                                <div class='post-date'>
+                                                                    <span class='date'>  </span>
+                                                                    <small class='month'>    </small>
+                                                                </div>
+                                                                <img src='assets/images/event/". $entry['id_genere'] .".jpg' alt='Image_not_found'>
+                                                            </div>
+                                                            <!-- event-image - end -->
+                                                            
+									                        <!-- event-content - start -->
+									                        <div class='event-content'>";
+			                                            //titolo dell'evento
+			                                            echo "<div class='event-title mb-15''>
+                                                            <h3 class='title'>". $entry['nome'] ."</h3>
+                                                            </div>";
+			                                            //prezzo
+			                                            echo "<span class='ticket-price yellow-color'>". $entry['prezzo'] ." EUR </span>";
+			                                            //data
+			                                            echo "<p class='discription-text mb-30'>". $entry['data_evento'] ."</p>";
+			                                            //dettagli
+			                                            echo "<div class='event-info-list ul-li clearfix'>
+                                                            <ul>
+                                                                <li>
+                                                                    <span class='icon'>
+                                                                        <i class='fas fa-ticket-alt'></i>
+                                                                    </span>
+                                                                    <div class='info-content'>
+                                                                        <small>Capienza massima</small>
+                                                                            <h3>". $entry['capienza'] ."</h3>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <a href='./eventDetails.php?idEvento=". $entry['id'] ."' class='tickets-details-btn'> tickets & details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        </div>
+                                                    <!-- event-content - end -->
+                
+                                                </div>
+                                                <!-- event-item - end -->
+                                                    ";
+		                                            }
+	                                            }
+	                                            else {
+		                                            echo("Nessun evento risulta disponibile al momento.");
+	                                            }
+                                            }
+											
+											
+                                        ?>
+									
+
+								
+
+							</div>
+
+							<div id="grid-style" class="tab-pane fade">
+								<div class="row justify-content-center">
+        
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- - end -->
 					
 				</div>
 			</div>
 		</section>
-		<!-- event-details-section - end
+		<!-- event-section - end
 		================================================== -->
 
 
@@ -680,7 +621,7 @@
 
 		<!-- default-footer-section - start
 		================================================== -->
-		<?php include "footer.php";?>
+		<?php include "footer.php"; ?>
 		<!-- default-footer-section - end
 		================================================== -->
 
@@ -720,6 +661,9 @@
 
 		<!-- multy count down - jqury include -->
 		<script src="assets/js/jquery.countdown.js"></script>
+
+		<!-- color panal - jqury include -->
+		<script src="assets/js/style-switcher.js"></script>
 
 		<!-- custom jquery include -->
 		<script src="assets/js/custom.js"></script>
