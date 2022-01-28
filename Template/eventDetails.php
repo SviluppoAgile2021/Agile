@@ -44,6 +44,7 @@
 
     <?php session_start(); ?>
 
+
 		<!-- backtotop - start -->
 		<div id="thetop" class="thetop"></div>
 		<div class='backtotop'>
@@ -178,6 +179,17 @@
                         </div>
                         <!-- reviewer-comment-wrapper - end -->
 
+                            <div class="comment-bar clearfix">
+
+                            <?php
+                            include("../Php/stampaCommenti.php");
+                            ?>
+
+                            </div>
+
+                        </div>
+                        <!-- reviewer-comment-wrapper - end -->
+
 						<!-- comment-form - start -->
 						<div class="comment-form clearfix">
 
@@ -193,7 +205,9 @@
 										<!-- form-item - start -->
 										<div class="col-lg-4 col-md-6 col-sm-12">
 											<div class="form-item mb-30">
+
 												 <?php  echo "Stai commentando come ".$_SESSION['username']; ?>
+                                                
 											</div>
 										</div>
 										<!-- form-item - end -->
