@@ -839,17 +839,17 @@
                 <div class="comment-form clearfix">
 
                     <div class="form-wrapper">
-                        <form action="../Php/contactController.php">
+                        <form action="../Php/chatController.php">
                             <div class="row">
                                 <!-- form-item - start -->
                                 <div class=" col-md-6">
-                                    <h6>Stai chattando come: <strong>[Nome]</strong></h6>
+                                    <h6><?php  echo "Stai chattando come: ".$_SESSION['username']; ?></h6>
                                 </div>
                                 <!-- form-item - end -->
                                 <!-- form-item - start -->
                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                     <div class="mb-30">
-                                        <textarea name="message" placeholder="Il tuo messaggio..." required></textarea>
+                                        <textarea name="messaggio" placeholder="Il tuo messaggio..." required></textarea>
                                     </div>
                                     <button type="submit" class="custom-btn">Invia</button>
                                 </div>
