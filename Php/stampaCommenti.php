@@ -1,13 +1,12 @@
 <?php
 include("ConnectionDB.php");
- $idEvento = 1;
 $ris = mysqli_query($conn,"SELECT *
 from Commenti c JOIN Utenti u ON c.id_utente = u.id
-where id_evento = $idEvento;");
+where id_evento = $id;");
 while ($rigaCorrente = $ris->fetch_array()) {
     $nomeUtente = $rigaCorrente['nome'];
     $cognomeUtente = $rigaCorrente['cognome'];
-    $id = $rigaCorrente['id'];
+
     $commentoUtente = $rigaCorrente['commento'];
 
     echo <<<EOL
