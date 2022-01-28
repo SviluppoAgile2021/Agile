@@ -11,7 +11,7 @@ while ($rigaCorrente = $ris->fetch_array()) {
 <div class="comment-content">
                                 <div class="admin-name mb-15">
                                     <div class="name">
-                                        <h4>$nomeUtente $cognomeUtente</h4>
+                                        <h5>$nomeUtente $cognomeUtente</h5>
                                     </div>
                                 </div>
                                 <div class="comment-text">

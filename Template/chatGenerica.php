@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -825,11 +826,8 @@
                             <h2 class="big-title">Chat <strong>generica</strong></h2>
                         </div>
 
-                        <div class="comment-bar clearfix">
-                            <?php
-                            include("../Php/stampaChat.php");
-                            ?>
-                        </div>
+                       <iframe id="iframe" src="../Php/chatGenerica.php" style="width: 100%; height: 100%"></iframe>
+
                     </div>
                     <!-- reviewer-comment-wrapper - end -->
                 </div>
@@ -839,11 +837,11 @@
                 <div class="comment-form clearfix">
 
                     <div class="form-wrapper">
-                        <form action="../Php/chatController.php">
+                        <form action="../Php/chatController.php" method="post">
                             <div class="row">
                                 <!-- form-item - start -->
                                 <div class=" col-md-6">
-                                    <h6><?php  echo "Stai chattando come: ".$_SESSION['username']; ?></h6>
+                                    <h6><?php echo "Stai chattando come: ".$_SESSION['username']; ?></h6>
                                 </div>
                                 <!-- form-item - end -->
                                 <!-- form-item - start -->
@@ -1166,6 +1164,16 @@
 
 <!-- custom jquery include -->
 <script src="assets/js/custom.js"></script>
+
+<script>window.setInterval(function() {
+        reloadIFrame()
+    }, 3000);
+
+    function reloadIFrame() {
+        console.log('reloading..');
+        document.getElementById('iframe').contentWindow.location.reload();
+    }
+</script>
 
 </body>
 </html>

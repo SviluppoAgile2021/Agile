@@ -9,4 +9,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $idUtente = $_SESSION['id'];
 
 }
-$chats->addComment($messaggio, $idUtente, false);
+$chats->addChat($messaggio, $idUtente, false);
+header('location: ../Template/chatGenerica.php');
