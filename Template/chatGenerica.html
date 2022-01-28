@@ -826,18 +826,9 @@
                         </div>
 
                         <div class="comment-bar clearfix">
-                            <div class="comment-content">
-                                <div class="admin-name mb-15">
-                                    <div class="name">
-                                        <h4>[user]</h4>
-                                    </div>
-                                </div>
-                                <div class="comment-text">
-                                    <p class="mb-30">
-                                        [messaggio]
-                                    </p>
-                                </div>
-                            </div>
+                            <?php
+                            include("../Php/stampaChat.php");
+                            ?>
                         </div>
                     </div>
                     <!-- reviewer-comment-wrapper - end -->
@@ -848,7 +839,7 @@
                 <div class="comment-form clearfix">
 
                     <div class="form-wrapper">
-                        <form action="chatGenerica.php">
+                        <form action="../Php/contactController.php">
                             <div class="row">
                                 <!-- form-item - start -->
                                 <div class=" col-md-6">
