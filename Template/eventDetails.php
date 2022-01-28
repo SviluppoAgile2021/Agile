@@ -1296,9 +1296,6 @@
 		<!-- multy count down - jqury include -->
 		<script src="assets/js/jquery.countdown.js"></script>
 
-		<!-- color panal - jqury include -->
-		<script src="assets/js/style-switcher.js"></script>
-
 		<!-- custom jquery include -->
 		<script src="assets/js/custom.js"></script>
 
