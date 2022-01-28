@@ -18,8 +18,8 @@
 												<i class="fas fa-map-marker-alt"></i>
 											</span>
 									<div class="info-content">
-										<p>100 highland ave,</p>
-										<h3>california, united state</h3>
+										<p>Via Verdi, 1</p>
+										<h3>Milano, Italia</h3>
 									</div>
 								</div>
 							</div>
@@ -32,8 +32,9 @@
 												<i class="fas fa-envelope"></i>
 											</span>
 									<div class="info-content">
-                                        <p><a href="#!">contact@example.com </a></p>
-										<h3><a href="#!">info@example.com</a></h3>
+                                        <h2><a href="#!">Harmony Concerti Italia</a></h2>
+                                        <p><a href="#!">info@harmonyconcerti.it</a></p>
+										<h3><a href="#!">press@harmonyconcerti.it</a></h3>
 									</div>
 								</div>
 							</div>
@@ -46,8 +47,8 @@
 												<i class="fas fa-phone"></i>
 											</span>
 									<div class="info-content">
-										<p><a href="#!">800 000 000</a></p>
-										<h3><a href="#!">800 000 000</a></h3>
+										<p><a href="#!">800 040 040</a></p>
+										<h3><a href="#!">326 477 8956</a></h3>
 									</div>
 								</div>
 							</div>
@@ -71,7 +72,7 @@
 						<!-- site-logo-wrapper - end -->
 						
 						<p class="mb-30">
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+							Gestione Concerti & Ticket Selling.
 						</p>
 						
 						<!-- social-links - start -->
@@ -144,7 +145,7 @@
 				<!-- copyright-text - start -->
 				<div class="col-lg-7 col-md-12 col-sm-12">
 					<div class="copyright-text">
-						<p class="m-0" style="color: navajowhite">©2021 <a href="#!" class="site-link">example.com</a> all right reserved</p>
+						<p class="m-0" style="color: navajowhite">©2022 <a href="#!" class="site-link">Harmony Concerti</a> — All Right Reserved</p>
 					</div>
 				</div>
 				<!-- copyright-text - end -->
