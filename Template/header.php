@@ -227,10 +227,12 @@
 											<ul class="sub-menu">
 												<li class="menu-item-has-children">
 													<a href="creazioneEvento.php"> Crea un evento </a>
-                                                    <a href="storico_eventi.php"> Storico eventi </a>
 												</li>
                                                 <li class="menu-item-has-children">
                                                     <a href="storico_eventi.php"> Storico eventi </a>
+                                                </li>
+                                                <li class="menu-item-has-children">
+                                                    <a href="eventi_suggeriti.php"> Eventi Suggeriti </a>
                                                 </li>
 											</ul>
 										</li>
