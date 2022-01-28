@@ -31,7 +31,7 @@
 					<div class="register-login-group">
 						<ul>
 							<li>
-								<a href="./signup.html">
+								<a href="./signup.php">
 									<i class="fas fa-user"></i>
 									Register
 								</a>
@@ -47,8 +47,8 @@
 											</div>
 											<div class="register-login-link mb-80">
 												<ul>
-													<li><a href="login.html">Login</a></li>
-													<li class="active"><a href="signup.html">Register</a></li>
+													<li><a href="login.php">Login</a></li>
+													<li class="active"><a href="signup.php">Register</a></li>
 												</ul>
 											</div>
 											<div class="copyright-text">
@@ -108,7 +108,7 @@
 								</div>
 							</li>
 							<li>
-								<a href="login.html">
+								<a href="login.php">
 									<i class="fas fa-lock"></i>
 									Login
 								</a>
@@ -202,7 +202,7 @@
 				<!-- site-logo-wrapper - start -->
 				<div class="col-lg-3">
 					<div class="site-logo-wrapper">
-						<a href="index-1.html" class="logo">
+						<a href="event-1.php" class="logo">
 							<img src="assets/images/0.site-logo.png" alt="logo_not_found">
 						</a>
 					</div>
@@ -227,28 +227,32 @@
 											<ul class="sub-menu">
 												<li class="menu-item-has-children">
 													<a href="creazioneEvento.php"> Crea un evento </a>
+                                                    <a href="storico_eventi.php"> Storico eventi </a>
 												</li>
+                                                <li class="menu-item-has-children">
+                                                    <a href="storico_eventi.php"> Storico eventi </a>
+                                                </li>
 											</ul>
 										</li>
 									</ul>
 								</div>
 							</div>
 							<!-- menu-item-list - end -->
-							
-							<!-- menu-item-list - start -->
-							<div class="col-lg-2">
-								<div class="user-search-btn-group ul-li clearfix">
-									<ul>
-										<li>
-											<a href="#!">
-												<i class="fas fa-user"></i>
-											</a>
-										</li>
-										
-									</ul>
-								</div>
-							</div>
-							<!-- menu-item-list - end -->
+
+                            <!-- menu-item-list - start -->
+                            <div class="col-lg-2">
+                                <div class="user-search-btn-group ul-li clearfix">
+                                    <ul>
+                                        <li>
+                                            <a href="adminPortalePage.php">
+                                                <i class="fas fa-user"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- menu-item-list - end -->
 						
 						</div>
 					</div>

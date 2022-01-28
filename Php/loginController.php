@@ -9,5 +9,5 @@ $login = new Login();
 
     if(isset($username) && isset($password)){
         $login->loginUtente($username, $password, false);
-        header('location: ../Template/event-1.html');  // home
+        header('location: ../Template/event-1.php');  // home
     }
