@@ -13,7 +13,5 @@ class ChatTest extends TestCase
         $this->assertTrue($chat->addChat("Testing Chat", 7,true));
         //Chat con Escape
         $this->assertTrue($chat->addChat("Testing Chat but with è *",7,true));
-        //Utente non valido
-        $this->assertFalse($chat->addChat("Testing Chat but no",602,true));
     }
 }
