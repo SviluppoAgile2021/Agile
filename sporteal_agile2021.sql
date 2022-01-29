@@ -378,6 +378,7 @@ CREATE TABLE Chat ( id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
                     messaggio TEXT NULL,
                     CONSTRAINT Chat_id_uindex unique (id),
                     CONSTRAINT Chat_Utenti_id_fk FOREIGN KEY (id) REFERENCES Utenti (id) ON DELETE CASCADE
+		   );
 
 -- Indici per le tabelle `Commenti`
 
