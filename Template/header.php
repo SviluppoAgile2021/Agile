@@ -240,6 +240,9 @@
                                         <li class="menu-item-has-children">
                                             <a href="calender.php">Calendario</a>
                                         </li>
+                                        <li class="menu-item-has-children">
+                                            <a href="chatGenerica.php">Chat</a>
+                                        </li>
 									</ul>
 								</div>
 							</div>
