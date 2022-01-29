@@ -372,6 +372,13 @@ ALTER TABLE `partecipano`
   ADD CONSTRAINT `partecipano_ibfk_2` FOREIGN KEY (`id_evento`) REFERENCES `Eventi` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
+CREATE TABLE Chat ( id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                    id_utente INT(11) NOT NULL,
+                    messaggio TEXT NULL,
+                    CONSTRAINT Chat_id_uindex unique (id),
+                    CONSTRAINT Chat_Utenti_id_fk FOREIGN KEY (id) REFERENCES Utenti (id) ON DELETE CASCADE
+);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
