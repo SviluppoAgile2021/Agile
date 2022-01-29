@@ -254,6 +254,7 @@ CREATE TABLE `Utenti` (
 -- Dump dei dati per la tabella `Utenti`
 --
 
+
 INSERT INTO `Utenti` (`id`, `nome`, `cognome`, `data_nascita`, `citta`, `username`, `pwd`) VALUES
 (1, 'Mario', 'Rossi', '1957-03-11', 'Roma', 'utente1', 'utente1'),
 (2, 'Giovanni', 'Bianchi', '1989-05-27', 'Milano', 'utente2', 'utente2'),
@@ -277,9 +278,8 @@ INSERT INTO `Utenti` (`id`, `nome`, `cognome`, `data_nascita`, `citta`, `usernam
 
 --
 -- Indici per le tabelle `Eventi`
---
 ALTER TABLE `Eventi`
-  ADD PRIMARY KEY (`id`,`id_luogo`,`id_gruppo`);
+    ADD PRIMARY KEY (`id`,`id_luogo`,`id_gruppo`);
 
 --
 -- Indici per le tabelle `formano`
@@ -372,11 +372,23 @@ ALTER TABLE `partecipano`
   ADD CONSTRAINT `partecipano_ibfk_2` FOREIGN KEY (`id_evento`) REFERENCES `Eventi` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
+
 CREATE TABLE Chat ( id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
                     id_utente INT(11) NOT NULL,
                     messaggio TEXT NULL,
                     CONSTRAINT Chat_id_uindex unique (id),
                     CONSTRAINT Chat_Utenti_id_fk FOREIGN KEY (id) REFERENCES Utenti (id) ON DELETE CASCADE
+
+-- Indici per le tabelle `Commenti`
+
+CREATE TABLE Commenti ( `id` int(11) NOT NULL AUTO_INCREMENT,
+                        `id_evento` int (11),
+                        `id_utente` int(11),
+                        `commento` TEXT NOT NULL,
+                        PRIMARY KEY (`id`),
+                        FOREIGN KEY (id_evento) REFERENCES Eventi(id) ON DELETE CASCADE,
+                        FOREIGN KEY (id_utente) REFERENCES Utenti(id) ON DELETE CASCADE
+
 );
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

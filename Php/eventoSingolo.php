@@ -1,9 +1,9 @@
 <?php
 include("ConnectionDB.php");
-$q = "select e.nome as nome_evento,e.data_evento,e.capienza,e.prezzo,e.offerta,e.formale,l.nome,l.citta,l.indirizzo,g.nome as genere
+$q = "select e.id as id_evento, e.nome as nome_evento,e.data_evento,e.capienza,e.prezzo,e.offerta,e.formale,l.nome,l.citta,l.indirizzo,g.nome as genere
 from Eventi e join Luoghi l on (l.id=e.id_luogo)
 join Generi g on (e.id_genere=g.id) 
-where e.id=2";
+where e.id='". $id ."'";
 $ris = mysqli_query($conn, $q);
 while ($rigaCorrente = $ris->fetch_array()) {
     $nomeEvento = $rigaCorrente['nome_evento'];
@@ -16,6 +16,8 @@ while ($rigaCorrente = $ris->fetch_array()) {
     $citta = $rigaCorrente['citta'];
     $indirizzo = $rigaCorrente['indirizzo'];
     $genereEvento = $rigaCorrente['genere'];
+    $idEvento = $rigaCorrente['id_evento'];
+
 
     //operazioni di manipolazione dei dati
     if($formale==1){
@@ -70,6 +72,9 @@ while ($rigaCorrente = $ris->fetch_array()) {
                 <span class='organizer_email'>organizzazione@email.com</span>
                 <span class='all_day_event'>false</span>
                 <span class='date_format'>YYYY/MM/DD</span>";
+    }
+    if($a==11){
+        echo"<input type='number' name='id_evento' value=$idEvento readonly required hidden>";
     }
 
 }

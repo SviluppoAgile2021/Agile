@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-		<title>Harmoni - Booking Event</title>
+		<title>Harmoni - Event List</title>
 		<link rel="shortcut icon" href="assets/images/favicon.png">
 
 		<!-- fraimwork - css include -->
@@ -56,7 +56,7 @@
 		<!-- backtotop - end -->
 
 		<!-- preloader - start -->
-
+<!--		<div id="preloader"></div>-->
 		<!-- preloader - end -->
 
 
@@ -64,7 +64,7 @@
 
 		<!-- header-section - start
 		================================================== -->
-		<?php include "header.php"; ?>
+		<?php include "header.php";?>
 		<!-- header-section - end
 		================================================== -->
 
@@ -157,8 +157,8 @@
 									our Services
 								</a>
 							</li>
-							<li>
-								<a href="event-1.html">
+							<li class="active">
+								<a href="event-1.php">
 									<span class="icon"><i class="fas fa-home"></i></span>
 									event list
 								</a>
@@ -213,7 +213,7 @@
 					<div class="menu-link-list inner-pages-links">
 						<h2 class="menu-title">all inner pages</h2>
 						<ul>
-							<li class="active">
+							<li>
 								<a href="booking.html">
 									<span class="icon"><i class="fas fa-home"></i></span>
 									event booking
@@ -465,17 +465,12 @@
 
 								<!-- breadcrumb-title - start -->
 								<div class="breadcrumb-title text-center mb-50">
-                                    <h2 class="big-title">Acquista ticket<h2>
+									<h2 class="big-title"> <strong>eventi</strong></h2>
 								</div>
 								<!-- breadcrumb-title - end -->
 
 								<!-- breadcrumb-list - start -->
-								<div class="breadcrumb-list">
-									<ul>
-										<li class="breadcrumb-item"><a href="index-1.html" class="breadcrumb-link">Home</a></li>
-										<li class="breadcrumb-item active" aria-current="page">booking</li>
-									</ul>
-								</div>
+								
 								<!-- breadcrumb-list - end -->
 
 							</div>
@@ -491,269 +486,136 @@
 
 
 
-
-
-
-
-
-		<!-- booking-section - start
+		<!-- event-search-section - start
 		================================================== -->
-		<section id="booking-section" class="booking-section bg-gray-light sec-ptb-100 clearfix">
+		
+		<!-- event-search-section - end
+		================================================== -->
+
+
+
+
+
+		<!-- event-section - start
+		================================================== -->
+		<section id="event-section" class="event-section bg-gray-light sec-ptb-100 clearfix">
 			<div class="container">
 				<div class="row">
 
-					<!-- booking-content-wrapper - start -->
-					<div class="col-lg-8 col-md-12 col-sm-12">
-						<div class="booking-content-wrapper">
-
-
-
-
-
-							<!-- reg-info - start -->
-							<div class="reg-info mb-50">
-
-								<!-- section-title - start -->
-								<div class="section-title mb-30">
-									<h2 class="big-title">Informazioni <strong>acquisto  </strong></h2>
-								</div>
-								<!-- section-title - end -->
-
-								<!-- row - start -->
-								<div class="row">
-
-									<!-- ticket-buying-form - start -->
-									<div class="col-lg-6 col-md-6 col-sm-12">
-										<div class="ticket-buying-form form-wrapper">
-											<h3 class="form-title">Acquirente : </h3>
-
-											<form action="#">
-												<div class="form-item">
-													<input type="text" placeholder="Nome">
-												</div>
-												<div class="form-item">
-													<input type="text" placeholder="Cognome">
-												</div>
-												<div class="form-item">
-													<input type="email" placeholder="Email">
-												</div>
-
-											</form>
-
-										</div>
-									</div>
-									<!-- ticket-buying-form - end -->
-
-									<!-- payment-form - start -->
-									<div class="col-lg-6 col-md-6 col-sm-12">
-										<div class="payment-form form-wrapper">
-											<h3 class="form-title">Pagamento</h3>
-
-											<form action="#">
-												<div class="form-item">
-													<select class="cradit-card-select">
-														<option selected="">Seleziona circuito</option>
-														<option>Visa</option>
-														<option>Mastercard</option>
-														<option>Maestro</option>
-														<option>Altro</option>
-
-													</select>
-												</div>
-												<div class="form-item">
-													<input type="number" placeholder="Numero carta" required>
-												</div>
-
-												<div class="expired-date-form">
-													<h3 class="title-text">Scadenza</h3>
-													<ul>
-
-														<li>
-															<div class="form-item">
-																<select class="month-select">
-																	<option selected="">Mese</option>
-																	<option>Gennaio</option>
-                                                                    <option>Febbraio</option>
-                                                                    <option>Marzo</option>
-                                                                    <option>Aprile</option>
-                                                                    <option>Maggio</option>
-                                                                    <option>Giugno</option>
-                                                                    <option>Luglio</option>
-                                                                    <option>Agosto</option>
-                                                                    <option>Settembre</option>
-                                                                    <option>Ottobre</option>
-                                                                    <option>Novembre</option>
-                                                                    <option>Dicembre</option>
-
-																</select>
-															</div>
-														</li>
-
-														<li>
-															<div class="form-item">
-																<select class="year-select">
-																	<option selected="">Anno</option>
-																	<option>2022</option>
-																	<option>2023</option>
-																	<option>2024</option>
-																	<option>2025</option>
-																	<option>2026</option>
-																</select>
-															</div>
-														</li>
-
-														<li>
-															<div class="form-item">
-																<input type="number" placeholder="CVV">
-															</div>
-														</li>
-
-													</ul>
-												</div>
-											</form>
-										</div>
-									</div>
-									<!-- payment-form - end -->
-
-								</div>
-								<!-- row - end -->
-
-							</div>
-							<!-- reg-info - end -->
-
-
-
-							<!-- billing-info - start -->
-							<div class="billing-info mb-50">
-
-								<!-- section-title - start -->
-								<div class="section-title mb-30">
-									<h2 class="big-title">Informazioni di  <strong>fatturazione</strong></h2>
-								</div>
-								<!-- section-title - end -->
-
-								<!-- billing-form - start -->
-								<div class="billing-form form-wrapper">
-									<form action="#">
-
-										<div class="form-item">
-											<select class="country-select">
-												<option selected="">Seleziona stato</option>
-												<option>Italia</option>
-												<option>Francia</option>
-												<option>Spagna</option>
-												<option>Germania</option>
-												<option>Polonia</option>
-											</select>
-										</div>
-										<div class="form-item">
-											<input type="text" placeholder="Indirizzo">
-										</div>
-										<div class="form-item">
-											<input type="text" placeholder="Indirizzo alternativo">
-										</div>
-
-										<!-- form-item-group - start -->
-										<div class="form-item-group mb-50">
-											<ul>
-
-												<li>
-													<div class="form-item">
-														<input type="text" placeholder="Città">
-													</div>
-												</li>
-												<li>
-													<div class="form-item">
-														<select class="country-select">
-															<option selected="">Provincia</option>
-															<option>A</option>
-															<option>B</option>
-															<option>C</option>
-															<option>D</option>
-															<option>E</option>
-														</select>
-													</div>
-												</li>
-												<li>
-													<div class="form-item">
-														<input type="text" placeholder="CAP">
-													</div>
-												</li>
-												
-											</ul>
-										</div>
-										<!-- form-item-group - end -->
-
-										<div class="text-center">
-											<button type="submit" class="custom-btn">
-												Conferma il pagamento
-											</button>
-										</div>
-
-									</form>
-								</div>
-								<!-- billing-form - end -->
-
-							</div>
-							<!-- billing-info - end -->
-							
-						</div>
-					</div>
-					<!-- booking-content-wrapper - end -->
-
 					<!-- sidebar-section - start -->
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="sidebar-section">
-
-							<!-- section-title - start -->
-							<div class="section-title mb-30">
-								<h2 class="big-title">Riepilogo <strong>ticket</strong></h2>
-							</div>
-							<!-- section-title - end -->
-
-							<!-- location-wrapper - start -->
-							<div class="location-wrapper bg-white">
-
-								<div class="title-wrapper">
-									<small class="up-arrow-icon">
-										<i class="fas fa-chevron-circle-up"></i>
-									</small>
-									<span class="icon">
-										<i class="fas fa-map-marker-alt"></i>
-									</span>
-									<div class="title-content">
-										<small>Luogo</small>
-										<h3><?php $a=3; include("../Php/eventoSingolo.php"); ?></h3>
-									</div>
-								</div>
-								<div class="location-info-list ul-li-block clearfix">
-									<span class="area-name"><?php $a=1; include("../Php/eventoSingolo.php"); ?></span>
-									<ul>
-                                        <li><i class="fas fa-arrow-circle-right"></i> Genere : <?php $a=4; include("../Php/eventoSingolo.php"); ?> </li>
-										<li><i class="fas fa-arrow-circle-right"></i> In offerta : <?php $a=7; include("../Php/eventoSingolo.php"); ?></li>
-										<li><i class="fas fa-arrow-circle-right"></i> <?php $a=2; include("../Php/eventoSingolo.php"); ?> </li>
-										<li><i class="fas fa-arrow-circle-right"></i> Dalle ore : <?php $a=9; include("../Php/eventoSingolo.php"); ?> </li>
-									</ul>
-								</div>
-								<div class="button">
-                                    <div title="" class="addeventatc" id="addeventatc1" aria-haspopup="true" aria-expanded="false" tabindex="0" style="visibility: visible;">
-                                        Aggiungi l'evento al calendario
-                                        <?php $a=10; include("../Php/eventoSingolo.php"); ?>
-                                    </div>
-								</div>
-
-
-							</div>
-							<!-- location-wrapper - end -->
-							
-						</div>
-					</div>
+     
 					<!-- sidebar-section - end -->
+
+					<!-- - start -->
+					<div class="col-lg-9 col-md-12 col-sm-12">
+
+						<div class="tab-content">
+							<div id="list-style" class="tab-pane fade in active show">
+
+								
+          
+										<?php
+                                            if(!isset($_SESSION['id'])){
+	                                            include "areaRiservata.php";
+                                            }
+											
+											else {
+												include("../Php/ConnectionDB.php");
+												
+												$query = "SELECT  *
+                                                        FROM partecipano
+                                                        inner join Utenti on partecipano.id_utente=Utenti.id
+                                                        inner join Eventi on partecipano.id_evento = Eventi.id
+                                                        where Utenti.id = '" . $_SESSION['id'] . "'";
+												
+												$ris = mysqli_query($conn, $query);
+												if ($res === FALSE) {
+													die(mysqli_error($conn));
+												}
+												if (mysqli_num_rows($ris) < 1) {
+													echo "<h3 class='title'> Nessun evento trovato </h3>";
+												}
+												
+												while ($rigaCorrente = $ris->fetch_array()) {
+													$idGenere = $rigaCorrente['id_genere'];
+													$query = "SELECT * FROM Eventi WHERE id_genere = '" . $idGenere . "' LIMIT 5";
+													$res = mysqli_query($conn, $query);
+													if (!empty($res)) {
+														$res = @mysqli_query($conn, $query);
+														while ($entry = mysqli_fetch_array($res)) {
+															echo "<!-- event-item - start -->
+								                            <div class='event-list-item clearfix'>
+                                                            <!-- event-image - start -->
+                                                            <div class='event-image'>
+                                                                <div class='post-date'>
+                                                                    <span class='date'>  </span>
+                                                                    <small class='month'>    </small>
+                                                                </div>
+                                                                <img src='assets/images/event/" . $entry['id_genere'] . ".jpg' alt='Image_not_found'>
+                                                            </div>
+                                                            <!-- event-image - end -->
+                                                            
+									                        <!-- event-content - start -->
+									                        <div class='event-content'>";
+															//titolo dell'evento
+															echo "<div class='event-title mb-15''>
+                                                            <h3 class='title'>" . $entry['nome'] . "</h3>
+                                                            </div>";
+															//prezzo
+															echo "<span class='ticket-price yellow-color'>" . $entry['prezzo'] . " EUR </span>";
+															//data
+															echo "<p class='discription-text mb-30'>" . $entry['data_evento'] . "</p>";
+															//dettagli
+															echo "<div class='event-info-list ul-li clearfix'>
+                                                            <ul>
+                                                                <li>
+                                                                    <span class='icon'>
+                                                                        <i class='fas fa-ticket-alt'></i>
+                                                                    </span>
+                                                                    <div class='info-content'>
+                                                                        <small>Capienza massima</small>
+                                                                            <h3>" . $entry['capienza'] . "</h3>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <a href='./eventDetails.php?idEvento=" . $entry['id'] . "' class='tickets-details-btn'> tickets & details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        </div>
+                                                    <!-- event-content - end -->
+                
+                                                </div>
+                                                <!-- event-item - end -->
+                                                    ";
+														}
+													} else {
+														echo("Nessun evento risulta disponibile al momento.");
+													}
+												}
+												
+											}
+                                        ?>
+									
+
+								
+
+							</div>
+
+							<div id="grid-style" class="tab-pane fade">
+								<div class="row justify-content-center">
+        
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- - end -->
 					
 				</div>
 			</div>
 		</section>
-		<!-- booking-section - end
+		<!-- event-section - end
 		================================================== -->
 
 
@@ -802,6 +664,9 @@
 
 		<!-- multy count down - jqury include -->
 		<script src="assets/js/jquery.countdown.js"></script>
+
+		<!-- color panal - jqury include -->
+		<script src="assets/js/style-switcher.js"></script>
 
 		<!-- custom jquery include -->
 		<script src="assets/js/custom.js"></script>

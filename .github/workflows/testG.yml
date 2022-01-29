@@ -7,9 +7,11 @@ on:
 
 
 
-    branches: [ main , c-CreaEvento, n-signup, s-Login, e-RimozioneUtente,  g-iscrizEventi, e-VisualizzaTuttiEventi, n-capienzamax, g-policyFormale, e-ModificaUtenti, g-templateEventi, e-ChatGenerica]
+
+    branches: [ main , c-CreaEvento, n-signup, s-Login, e-RimozioneUtente,  g-iscrizEventi, e-VisualizzaTuttiEventi, n-capienzamax, g-policyFormale, e-ModificaUtenti, g-templateEventi, s-SezioneCommentiEventi, e-ChatGenerica]
   pull_request:
-    branches: [ main , c-CreaEvento, n-signup, s-Login, e-RimozioneUtente,  g-iscrizEventi, e-VisualizzaTuttiEventi, n-capienzamax, g-policyFormale, e-ModificaUtenti, g-templateEventi, e-ChatGenerica]
+    branches: [ main , c-CreaEvento, n-signup, s-Login, e-RimozioneUtente,  g-iscrizEventi, e-VisualizzaTuttiEventi, n-capienzamax, g-policyFormale, e-ModificaUtenti, g-templateEventi, s-SezioneCommentiEventi, e-ChatGenerica]
+
     
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
